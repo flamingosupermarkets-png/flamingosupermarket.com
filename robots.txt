@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /grab.html
+Sitemap: https://flamingosupermarket.com/sitemap.xml
