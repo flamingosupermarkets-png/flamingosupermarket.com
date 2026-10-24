@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Restaurants · Flamingo Supermarket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="img/logo.jpg">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.page-hero{padding-block:44px 28px}
+.page-hero h1{font-size:clamp(2.4rem,6vw,4rem)}
+.page-hero p{color:var(--ink-2);max-width:56ch;margin-top:12px;font-size:1.1rem}
+.menu-full{display:grid;grid-template-columns:1fr 1fr;gap:40px 56px}
+@media (max-width:760px){.menu-full{grid-template-columns:1fr}}
+.khead{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin-bottom:12px}
+.khead img{width:120px;height:90px;object-fit:cover;border-radius:12px;border:2px solid var(--ink)}
+.khead h2{font-size:1.7rem}
+.khead .sub{color:var(--pink);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.ev-big{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:24px 0;border-top:2px solid var(--ink)}
+.ev-big:last-of-type{border-bottom:2px solid var(--ink)}
+.ev-big .when{font-family:var(--display);font-weight:800;font-size:1.3rem;line-height:1.1}
+.ev-big .when small{display:block;font:600 .75rem/1.3 var(--body);color:var(--pink);text-transform:uppercase;letter-spacing:.06em}
+.ev-big p{color:var(--ink-2)}
+.pill{display:inline-block;font:700 .75rem/1 var(--body);padding:.45em .8em;border-radius:999px;background:var(--lime);color:var(--lime-ink);margin-top:8px}
+@media (max-width:560px){.ev-big{grid-template-columns:1fr;gap:8px}}
+.timeline{display:grid;gap:0}
+.tl{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+.tl b{font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--pink)}
+.tl p{color:var(--ink-2)}
+.cater-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){.cater-grid{grid-template-columns:1fr}}
+.cater{background:var(--card);border:2px solid var(--ink);border-radius:var(--radius);padding:20px;display:grid;gap:8px;min-width:0}
+.cater ul{margin:0;padding-left:18px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <span><span class="dot">●</span> <span class="en">Open today 7 AM – 10 PM</span><span class="es">Abierto hoy 7 AM – 10 PM</span></span>
+  <span>2581 N Hiatus Rd, Cooper City · Embassy Lakes</span>
+  <span>(954) 228-0435</span>
+</div></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><img src="img/logo.jpg" alt="Flamingo Supermarkets logo">Flamingo</a>
+  <nav class="menu" aria-label="Main">
+    <a href="restaurants.html" aria-current="page"><span class="en">Restaurants</span><span class="es">Restaurantes</span></a>
+    <a href="events.html"><span class="en">Events</span><span class="es">Eventos</span></a>
+    <a href="story.html"><span class="en">Our story &amp; catering</span><span class="es">Nuestra historia y catering</span></a>
+    <a href="weekly-ad.html"><span class="en">Weekly ad</span><span class="es">Ofertas</span></a>
+    <a class="shop" href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener"><span class="en">Shop online</span><span class="es">Compra en línea</span></a>
+  </nav>
+  <button class="lang-btn" id="langBtn" type="button" aria-label="Cambiar idioma"><span class="en">ES</span><span class="es">EN</span></button>
+</div></header>
+<main>
+
+<section class="page-hero"><div class="wrap">
+  <span class="eyebrow"><span class="en">Eat here too</span><span class="es">Come aquí también</span></span>
+  <h1><span class="en">Six kitchens. One roof. Open 7 AM to 10 PM.</span><span class="es">Seis cocinas. Un techo. Abierto de 7 AM a 10 PM.</span></h1>
+  <p><span class="en">Sit down in the food hall or take it to go. Daily specials change; follow @flamingo_supermarkets and @lacasitadelosnanos for today's menu, or call (954) 228-0435.</span><span class="es">Siéntate en el food hall o pide para llevar. Los especiales cambian a diario; sigue a @flamingo_supermarkets y @lacasitadelosnanos para el menú de hoy, o llama al (954) 228-0435.</span></p>
+</div></section>
+
+<section class="sec" style="padding-top:12px"><div class="wrap menu-full">
+  <div>
+    <div class="khead"><img src="img/casita.jpg" alt=""><div><div class="sub"><span class="en">Ecuadorian kitchen · from 7 AM</span><span class="es">Cocina ecuatoriana · desde las 7</span></div><h2>La Casita de los Ñaños</h2></div></div>
+    <div class="mitem"><strong>Desayuno Especial · 8–11 AM</strong><b class="price">$10.99</b><span><span class="en">Bolón, bistec, huevo frito and a free café americano.</span><span class="es">Bolón, bistec, huevo frito y café americano gratis.</span></span></div>
+    <div class="mitem"><strong>Encebollado</strong><span><span class="en">Albacore tuna and yuca soup with pickled red onion. The Ecuadorian breakfast classic.</span><span class="es">Sopa de atún y yuca con cebolla curtida. El clásico desayuno ecuatoriano.</span></span></div>
+    <div class="mitem"><strong>Bolón de Verde</strong><span><span class="en">Green plantain ball with cheese or chicharrón.</span><span class="es">Bola de plátano verde con queso o chicharrón.</span></span></div>
+    <div class="mitem"><strong>Tigrillo</strong><span><span class="en">Scrambled green plantain with egg and cheese.</span><span class="es">Plátano verde majado con huevo y queso.</span></span></div>
+    <div class="mitem"><strong>Seco de Chivo</strong><span><span class="en">Slow-braised goat stew with rice, maduro and avocado.</span><span class="es">Chivo guisado con arroz, maduro y aguacate.</span></span></div>
+    <div class="mitem"><strong>Hornado con Mote</strong><span><span class="en">Slow-roasted pork with hominy, llapingacho and agrio.</span><span class="es">Cerdo horneado con mote, llapingacho y agrio.</span></span></div>
+    <div class="mitem"><strong>Fritada</strong><span><span class="en">Fried pork with mote, maduro and llapingacho.</span><span class="es">Carne de cerdo frita con mote, maduro y llapingacho.</span></span></div>
+    <div class="mitem"><strong>Ceviche de Camarón</strong><span><span class="en">Ecuadorian-style shrimp ceviche with chifles and canguil.</span><span class="es">Ceviche de camarón al estilo ecuatoriano con chifles y canguil.</span></span></div>
+    <div class="mitem"><strong>Guatita</strong><span><span class="en">Tripe stew in peanut sauce with rice and avocado.</span><span class="es">Guatita en salsa de maní con arroz y aguacate.</span></span></div>
+    <div class="mitem"><strong>Caldo de Pata</strong><span><span class="en">Cow-foot soup with mote. Weekend favorite.</span><span class="es">Caldo de pata con mote. Favorito del fin de semana.</span></span></div>
+    <p class="fineprint"><span class="en">Daily rotating menu; not everything is available every day.</span><span class="es">Menú rotativo; no todo está disponible todos los días.</span></p>
+  </div>
+  <div style="display:grid;gap:36px;align-content:start">
+    <div>
+      <div class="khead"><img src="img/tacos.jpg" alt=""><div><div class="sub"><span class="en">Taco stand · live music Saturdays</span><span class="es">Puesto de tacos · música los sábados</span></div><h2>Taco Way Taqueria</h2></div></div>
+      <div class="mitem"><strong>Tacos al Pastor</strong><span><span class="en">Marinated pork off the trompo with pineapple, cilantro and onion.</span><span class="es">Cerdo adobado del trompo con piña, cilantro y cebolla.</span></span></div>
+      <div class="mitem"><strong>Tacos de Carne Asada</strong><span><span class="en">Grilled steak on corn tortillas.</span><span class="es">Carne asada en tortillas de maíz.</span></span></div>
+      <div class="mitem"><strong>Tacos de Birria</strong><span><span class="en">Slow-cooked beef with consomé for dipping.</span><span class="es">Res cocida lentamente con consomé para remojar.</span></span></div>
+      <div class="mitem"><strong>Burritos &amp; Quesadillas</strong><span><span class="en">Your choice of meat, rice, beans, cheese and salsa.</span><span class="es">Carne a elegir, arroz, frijoles, queso y salsa.</span></span></div>
+    </div>
+    <div>
+      <div class="khead"><img src="img/salchipapa.jpg" alt=""><div><div class="sub">Mon–Fri 4–9 PM</div><h2>Flamingo Picantería</h2></div></div>
+      <div class="mitem"><strong>Pinchos de Carne y Pollo</strong><span><span class="en">Beef and chicken skewers with chorizo, maduro and papas.</span><span class="es">Pinchos con chorizo, maduro y papas.</span></span></div>
+      <div class="mitem"><strong>Carne Asada con Menestra</strong><span><span class="en">Grilled steak, lentil stew, rice and maduro.</span><span class="es">Carne a la parrilla, menestra, arroz y maduro.</span></span></div>
+      <div class="mitem"><strong>Salchipapa</strong><span><span class="en">Fries and sausage with ají, salsa rosada and mustard.</span><span class="es">Papas con salchicha, ají, salsa rosada y mostaza.</span></span></div>
+      <div class="mitem"><strong>Papi Pollo · Papi Hornado</strong><span><span class="en">Fries topped with chicken or hornado.</span><span class="es">Papas con pollo u hornado.</span></span></div>
+      <div class="mitem"><strong>Chaulafán</strong><span><span class="en">Ecuadorian fried rice.</span><span class="es">Arroz chaulafán ecuatoriano.</span></span></div>
+      <div class="mitem"><strong>Chicken Tenders</strong><span><span class="en">For the kids.</span><span class="es">Para los niños.</span></span></div>
+    </div>
+    <div>
+      <div class="khead"><img src="img/bakery.jpg" alt=""><div><div class="sub"><span class="en">Bakery · fresh every morning</span><span class="es">Panadería · fresco cada mañana</span></div><h2>Panadería Ambato</h2></div></div>
+      <div class="mitem"><strong>Pan de Yuca</strong><span><span class="en">Cheese bread, warm from the oven.</span><span class="es">Pan de queso, caliente del horno.</span></span></div>
+      <div class="mitem"><strong>Humitas · Empanadas</strong><span><span class="en">Sweet corn tamales and baked empanadas.</span><span class="es">Humitas de choclo y empanadas al horno.</span></span></div>
+      <div class="mitem"><strong>Guaguas de Pan</strong><span><span class="en">In season for Día de los Difuntos, with colada morada.</span><span class="es">En temporada de Finados, con colada morada.</span></span></div>
+      <div class="mitem"><strong>Tres Leches &amp; Cakes to Order</strong><span><span class="en">Birthday, seasonal and custom cakes. Order at the counter or call ahead.</span><span class="es">Tortas de cumpleaños, de temporada y personalizadas. Pide en el mostrador o llama.</span></span></div>
+    </div>
+    <div>
+      <div class="khead"><img src="img/juice.jpg" alt=""><div><div class="sub"><span class="en">Juice bar</span><span class="es">Jugos</span></div><h2>Cane Cartel</h2></div></div>
+      <div class="mitem"><strong>Jugo de Caña</strong><span><span class="en">Sugar cane pressed to order.</span><span class="es">Caña exprimida al momento.</span></span></div>
+      <div class="mitem"><strong>Jugos Naturales &amp; Batidos</strong><span><span class="en">Mora, maracuyá, naranjilla, guanábana, mango and more.</span><span class="es">Mora, maracuyá, naranjilla, guanábana, mango y más.</span></span></div>
+      <div class="mitem"><strong>Café Ecuatoriano</strong><span><span class="en">Americano, con leche, or iced.</span><span class="es">Americano, con leche o frío.</span></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec kitchens"><div class="wrap">
+  <div class="sec-head">
+    <div><span class="eyebrow"><span class="en">Coming soon</span><span class="es">Muy pronto</span></span><h2>Flamingo Bar &amp; Grill</h2></div>
+    <p><span class="en">Opening in the back, next to Taco Way: a full bar and grill with table seating. Sit down for lunch or dinner from any of our kitchens, order a drink and catch the game on the big screens.</span><span class="es">Abre al fondo, junto a Taco Way: bar y parrilla con mesas. Siéntate a almorzar o cenar de cualquiera de nuestras cocinas, pide algo de tomar y mira el partido en las pantallas.</span></p>
+  </div>
+</div></section>
+
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <img src="img/logo.jpg" alt="" style="width:64px;height:64px;border-radius:50%;margin-bottom:12px">
+      <p style="opacity:.85;max-width:30ch"><span class="en">Cooper City's international supermarket and eatery.</span><span class="es">El supermercado internacional y comedor de Cooper City.</span></p>
+      <ul style="margin-top:14px"><li><a href="https://www.instagram.com/flamingo_supermarkets/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/612159848655351" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.tiktok.com/@flamingo.supermar" target="_blank" rel="noopener">TikTok</a></li></ul>
+    </div>
+    <div><h4><span class="en">Visit</span><span class="es">Visítanos</span></h4><p>2581 N Hiatus Rd<br>Embassy Lakes Shopping Center<br>Cooper City, FL 33026</p><p style="margin-top:8px"><a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener"><span class="en">Directions →</span><span class="es">Cómo llegar →</span></a></p></div>
+    <div><h4><span class="en">Hours</span><span class="es">Horario</span></h4><p><span class="en">Open daily 7 AM – 10 PM</span><span class="es">Todos los días 7 AM – 10 PM</span></p><p style="margin-top:8px">(954) 228-0435<br>flamingosupermarkets@gmail.com</p></div>
+    <div><h4><span class="en">Explore</span><span class="es">Explora</span></h4><ul>
+      <li><a href="index.html"><span class="en">Home</span><span class="es">Inicio</span></a></li>
+      <li><a href="restaurants.html"><span class="en">Restaurants &amp; menus</span><span class="es">Restaurantes y menús</span></a></li>
+      <li><a href="events.html"><span class="en">Events</span><span class="es">Eventos</span></a></li>
+      <li><a href="story.html"><span class="en">Our story &amp; catering</span><span class="es">Historia y catering</span></a></li>
+      <li><a href="weekly-ad.html"><span class="en">Weekly ad</span><span class="es">Ofertas</span></a></li>
+      <li><a href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener"><span class="en">Shop online</span><span class="es">Compra en línea</span></a></li>
+    </ul></div>
+  </div>
+  <div class="legal"><span>© 2026 Flamingo Supermarkets</span><span><span class="en">Cooper City, Florida</span><span class="es">Cooper City, Florida</span></span></div>
+</div></footer>
+<nav class="actionbar" aria-label="Quick actions">
+  <a href="tel:+19542280435">📞 <span class="en">Call</span><span class="es">Llamar</span></a>
+  <a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener">📍 <span class="en">Directions</span><span class="es">Cómo llegar</span></a>
+  <a href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener">🛒 <span class="en">Shop</span><span class="es">Comprar</span></a>
+</nav>
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){root.setAttribute('lang',l);try{localStorage.setItem('flamingo-lang',l)}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('flamingo-lang')}catch(e){}
+  if(!saved){saved=(navigator.language||'').toLowerCase().indexOf('es')===0?'es':'en'}
+  setLang(saved);
+  document.getElementById('langBtn').addEventListener('click',function(){setLang(root.getAttribute('lang')==='es'?'en':'es')});
+})();
+</script>
+</body>
+</html>
