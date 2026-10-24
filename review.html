@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How did we do? · Flamingo Supermarket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="img/logo.jpg">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.page-hero{padding-block:44px 28px}
+.page-hero h1{font-size:clamp(2.4rem,6vw,4rem)}
+.page-hero p{color:var(--ink-2);max-width:56ch;margin-top:12px;font-size:1.1rem}
+.menu-full{display:grid;grid-template-columns:1fr 1fr;gap:40px 56px}
+@media (max-width:760px){.menu-full{grid-template-columns:1fr}}
+.khead{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin-bottom:12px}
+.khead img{width:120px;height:90px;object-fit:cover;border-radius:12px;border:2px solid var(--ink)}
+.khead h2{font-size:1.7rem}
+.khead .sub{color:var(--pink);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.ev-big{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:24px 0;border-top:2px solid var(--ink)}
+.ev-big:last-of-type{border-bottom:2px solid var(--ink)}
+.ev-big .when{font-family:var(--display);font-weight:800;font-size:1.3rem;line-height:1.1}
+.ev-big .when small{display:block;font:600 .75rem/1.3 var(--body);color:var(--pink);text-transform:uppercase;letter-spacing:.06em}
+.ev-big p{color:var(--ink-2)}
+.pill{display:inline-block;font:700 .75rem/1 var(--body);padding:.45em .8em;border-radius:999px;background:var(--lime);color:var(--lime-ink);margin-top:8px}
+@media (max-width:560px){.ev-big{grid-template-columns:1fr;gap:8px}}
+.timeline{display:grid;gap:0}
+.tl{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+.tl b{font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--pink)}
+.tl p{color:var(--ink-2)}
+.cater-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){.cater-grid{grid-template-columns:1fr}}
+.cater{background:var(--card);border:2px solid var(--ink);border-radius:var(--radius);padding:20px;display:grid;gap:8px;min-width:0}
+.cater ul{margin:0;padding-left:18px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <span><span class="dot">●</span> <span class="en">Open today 7 AM – 10 PM</span><span class="es">Abierto hoy 7 AM – 10 PM</span></span>
+  <span>2581 N Hiatus Rd, Cooper City · Embassy Lakes</span>
+  <span>(954) 228-0435</span>
+</div></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><img src="img/logo.jpg" alt="Flamingo Supermarkets logo">Flamingo</a>
+  <nav class="menu" aria-label="Main">
+    <a href="restaurants.html"><span class="en">Restaurants</span><span class="es">Restaurantes</span></a>
+    <a href="events.html"><span class="en">Events</span><span class="es">Eventos</span></a>
+    <a href="story.html"><span class="en">Our story &amp; catering</span><span class="es">Nuestra historia y catering</span></a>
+    <a class="ad" href="weekly-ad.html"><span class="en">Weekly ad</span><span class="es">Ofertas</span></a>
+    <a class="shop" href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener"><span class="en">Shop online</span><span class="es">Compra en línea</span></a>
+  </nav>
+  <button class="lang-btn" id="langBtn" type="button" aria-label="Cambiar idioma"><span class="en">ES</span><span class="es">EN</span></button>
+</div></header>
+<main>
+
+<section class="page-hero" style="text-align:center;padding-bottom:0"><div class="wrap" style="max-width:620px">
+  <img src="img/logo.jpg" alt="" style="width:84px;height:84px;border-radius:50%;border:3px solid var(--ink);margin:0 auto 12px;display:block">
+  <span class="eyebrow"><span class="en">Thanks for visiting Flamingo</span><span class="es">Gracias por visitar Flamingo</span></span>
+  <h1 style="font-size:clamp(2rem,6vw,3rem)"><span class="en">How did we do today?</span><span class="es">¿Cómo lo hicimos hoy?</span></h1>
+  <p style="margin:8px auto 0"><span class="en">Tap a star. It takes ten seconds and the family reads every one.</span><span class="es">Toca una estrella. Toma diez segundos y la familia lee cada una.</span></p>
+</div></section>
+<section class="sec" style="padding-top:20px"><div class="wrap" style="max-width:620px">
+  <div class="rv-card" id="rvStep1">
+    <div class="rv-stars" role="radiogroup" aria-label="Rating">
+      <button type="button" data-v="1" aria-label="1 star">★</button><button type="button" data-v="2" aria-label="2 stars">★</button><button type="button" data-v="3" aria-label="3 stars">★</button><button type="button" data-v="4" aria-label="4 stars">★</button><button type="button" data-v="5" aria-label="5 stars">★</button>
+    </div>
+    <p class="rv-hint" id="rvHint"><span class="en">1 = not good · 5 = loved it</span><span class="es">1 = nada bien · 5 = me encantó</span></p>
+  </div>
+
+  <div class="rv-card rv-happy" id="rvHappy" hidden>
+    <div class="rv-big">🎉</div>
+    <h2><span class="en">That made our day. Would you tell Cooper City?</span><span class="es">Nos alegraste el día. ¿Se lo cuentas a Cooper City?</span></h2>
+    <p><span class="en">A quick Google review is the biggest favor you can do for a family business. It takes one minute and helps neighbors find us.</span><span class="es">Una reseña rápida en Google es el mayor favor que le puedes hacer a un negocio familiar. Toma un minuto y ayuda a que los vecinos nos encuentren.</span></p>
+    <a class="btn btn-pink" id="rvGoogle" href="https://search.google.com/local/writereview?placeid=ChIJuR4mQQCn2YgRPWwsJYyKJrM" target="_blank" rel="noopener"><span class="en">Write a Google review</span><span class="es">Escribir reseña en Google</span></a>
+    <p class="rv-small"><span class="en">Prefer Facebook?</span><span class="es">¿Prefieres Facebook?</span> <a href="https://www.facebook.com/profile.php?id=61576623962537" target="_blank" rel="noopener"><span class="en">Recommend us there</span><span class="es">Recomiéndanos allí</span></a></p>
+  </div>
+
+  <div class="rv-card rv-sad" id="rvSad" hidden>
+    <div class="rv-big">🙏</div>
+    <h2><span class="en">We're sorry. Let us make it right.</span><span class="es">Lo sentimos. Déjanos arreglarlo.</span></h2>
+    <p><span class="en">This goes straight to the owners, not to the public. Tell us what happened and we'll reach out.</span><span class="es">Esto va directo a los dueños, no al público. Cuéntanos qué pasó y te contactamos.</span></p>
+    <form id="rvForm">
+      <label><span class="en">What happened?</span><span class="es">¿Qué pasó?</span><textarea name="entry.969683752" rows="4" required></textarea></label>
+      <label><span class="en">Your name</span><span class="es">Tu nombre</span><input name="entry.1132317877" type="text" autocomplete="name"></label>
+      <label><span class="en">Phone or email so we can fix it</span><span class="es">Teléfono o email para resolverlo</span><input name="entry.1500603990" type="text" autocomplete="tel"></label>
+      <input type="hidden" name="entry.1541417192" id="rvRatingField" value="">
+      <button class="btn btn-ink" type="submit"><span class="en">Send to the owners</span><span class="es">Enviar a los dueños</span></button>
+    </form>
+    <p class="rv-small"><span class="en">Or call us now:</span><span class="es">O llámanos ahora:</span> <a href="tel:+19542280435">(954) 228-0435</a></p>
+  </div>
+
+  <div class="rv-card rv-done" id="rvDone" hidden>
+    <div class="rv-big">💛</div>
+    <h2><span class="en">Got it. Thank you.</span><span class="es">Recibido. Gracias.</span></h2>
+    <p><span class="en">Someone from the family will follow up. We hope to see you again soon.</span><span class="es">Alguien de la familia te contactará. Esperamos verte pronto.</span></p>
+    <a class="btn btn-ghost" href="index.html"><span class="en">Back to flamingosupermarket.com</span><span class="es">Volver a flamingosupermarket.com</span></a>
+  </div>
+</div></section>
+<script>
+(function(){
+  var stars=[].slice.call(document.querySelectorAll('.rv-stars button')),hint=document.getElementById('rvHint');
+  var s1=document.getElementById('rvStep1'),happy=document.getElementById('rvHappy'),sad=document.getElementById('rvSad'),done=document.getElementById('rvDone');
+  function paint(n){stars.forEach(function(b,i){b.classList.toggle('on',i<n)})}
+  stars.forEach(function(b){
+    b.addEventListener('mouseenter',function(){paint(+b.dataset.v)});
+    b.addEventListener('mouseleave',function(){paint(0)});
+    b.addEventListener('click',function(){
+      var v=+b.dataset.v; paint(v); document.getElementById('rvRatingField').value=v;
+      setTimeout(function(){ s1.hidden=true; (v>=4?happy:sad).hidden=false; window.scrollTo({top:0,behavior:'smooth'}); },250);
+    });
+  });
+  document.getElementById('rvForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var fd=new FormData(e.target);
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSderSEuAwcIjcNZZcQxNdGYIUQfjG5AjGEiweYYwiAzrcFv7g/formResponse',{method:'POST',mode:'no-cors',body:fd}).catch(function(){});
+    sad.hidden=true; done.hidden=false; window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+</script>
+
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <img src="img/logo.jpg" alt="" style="width:64px;height:64px;border-radius:50%;margin-bottom:12px">
+      <p style="opacity:.85;max-width:30ch"><span class="en">Cooper City's international supermarket and eatery.</span><span class="es">El supermercado internacional y comedor de Cooper City.</span></p>
+      <ul style="margin-top:14px"><li><a href="https://www.instagram.com/flamingo_supermarkets/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/612159848655351" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.tiktok.com/@flamingo.supermar" target="_blank" rel="noopener">TikTok</a></li></ul>
+    </div>
+    <div><h4><span class="en">Visit</span><span class="es">Visítanos</span></h4><p>2581 N Hiatus Rd<br>Embassy Lakes Shopping Center<br>Cooper City, FL 33026</p><p style="margin-top:8px"><a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener"><span class="en">Directions →</span><span class="es">Cómo llegar →</span></a></p></div>
+    <div><h4><span class="en">Hours</span><span class="es">Horario</span></h4><p><span class="en">Open daily 7 AM – 10 PM</span><span class="es">Todos los días 7 AM – 10 PM</span></p><p style="margin-top:8px">(954) 228-0435<br>flamingosupermarkets@gmail.com</p></div>
+    <div><h4><span class="en">Explore</span><span class="es">Explora</span></h4><ul>
+      <li><a href="index.html"><span class="en">Home</span><span class="es">Inicio</span></a></li>
+      <li><a href="restaurants.html"><span class="en">Restaurants &amp; menus</span><span class="es">Restaurantes y menús</span></a></li>
+      <li><a href="events.html"><span class="en">Events</span><span class="es">Eventos</span></a></li>
+      <li><a href="story.html"><span class="en">Our story &amp; catering</span><span class="es">Historia y catering</span></a></li>
+      <li><a href="weekly-ad.html"><span class="en">Weekly ad</span><span class="es">Ofertas</span></a></li>
+      <li><a href="recipe.html"><span class="en">Recipe of the week</span><span class="es">Receta de la semana</span></a></li>
+      <li><a href="https://search.google.com/local/writereview?placeid=ChIJuR4mQQCn2YgRPWwsJYyKJrM" target="_blank" rel="noopener"><span class="en">Leave a Google review</span><span class="es">Déjanos una reseña en Google</span></a></li>
+      <li><a href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener"><span class="en">Shop online</span><span class="es">Compra en línea</span></a></li>
+    </ul></div>
+  </div>
+  <div class="legal"><span>© 2026 Flamingo Supermarkets</span><span><span class="en">Cooper City, Florida</span><span class="es">Cooper City, Florida</span></span></div>
+</div></footer>
+<nav class="actionbar" aria-label="Quick actions">
+  <a href="tel:+19542280435">📞 <span class="en">Call</span><span class="es">Llamar</span></a>
+  <a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener">📍 <span class="en">Directions</span><span class="es">Cómo llegar</span></a>
+  <a href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener">🛒 <span class="en">Shop</span><span class="es">Comprar</span></a>
+</nav>
+<script>
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+if(!location.hash){window.scrollTo(0,0);addEventListener('pageshow',()=>window.scrollTo(0,0));try{if(parent!==window)parent.scrollTo(0,0)}catch(e){}}
+(function(){
+  var root=document.documentElement;
+  function setLang(l){root.setAttribute('lang',l);try{localStorage.setItem('flamingo-lang',l)}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('flamingo-lang')}catch(e){}
+  if(!saved){saved=(navigator.language||'').toLowerCase().indexOf('es')===0?'es':'en'}
+  setLang(saved);
+  document.getElementById('langBtn').addEventListener('click',function(){setLang(root.getAttribute('lang')==='es'?'en':'es')});
+})();
+</script>
+</body>
+</html>
