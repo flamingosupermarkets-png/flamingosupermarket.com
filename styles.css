@@ -203,7 +203,7 @@ footer .legal{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255
 .today-dir{display:block;margin-top:14px;font-weight:700;text-decoration:none;color:var(--pink)}
 .today .sticker.lime{top:-54px;right:-18px;transform:rotate(10deg)}
 .today .sticker.pink{right:auto;left:-26px;bottom:-40px;width:118px;height:118px;transform:rotate(-9deg)}
-@media (max-width:900px){.today .sticker.lime{top:-44px;right:-8px}.today .sticker.pink{left:auto;right:-8px;bottom:-44px}}
+@media (max-width:900px){.today{padding-bottom:70px}.today .sticker.lime{top:-44px;right:-8px}.today .sticker.pink{left:auto;right:-8px;bottom:-30px;width:104px;height:104px;font-size:.85rem}}
 .float{animation:bob 5s ease-in-out infinite}
 .float.d2{animation-delay:-2.5s}
 @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
