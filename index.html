@@ -254,6 +254,8 @@
 </nav>
 
 <script>
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+if(!location.hash){window.scrollTo(0,0);addEventListener('pageshow',()=>window.scrollTo(0,0));try{if(parent!==window)parent.scrollTo(0,0)}catch(e){}}
 (function(){
   var root=document.documentElement;
   function setLang(l){root.setAttribute('lang',l);try{localStorage.setItem('flamingo-lang',l)}catch(e){}}
