@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Links · Flamingo Supermarket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="img/logo.jpg">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.page-hero{padding-block:44px 28px}
+.page-hero h1{font-size:clamp(2.4rem,6vw,4rem)}
+.page-hero p{color:var(--ink-2);max-width:56ch;margin-top:12px;font-size:1.1rem}
+.menu-full{display:grid;grid-template-columns:1fr 1fr;gap:40px 56px}
+@media (max-width:760px){.menu-full{grid-template-columns:1fr}}
+.khead{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin-bottom:12px}
+.khead img{width:120px;height:90px;object-fit:cover;border-radius:12px;border:2px solid var(--ink)}
+.khead h2{font-size:1.7rem}
+.khead .sub{color:var(--pink);font-weight:700;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.ev-big{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:24px 0;border-top:2px solid var(--ink)}
+.ev-big:last-of-type{border-bottom:2px solid var(--ink)}
+.ev-big .when{font-family:var(--display);font-weight:800;font-size:1.3rem;line-height:1.1}
+.ev-big .when small{display:block;font:600 .75rem/1.3 var(--body);color:var(--pink);text-transform:uppercase;letter-spacing:.06em}
+.ev-big p{color:var(--ink-2)}
+.pill{display:inline-block;font:700 .75rem/1 var(--body);padding:.45em .8em;border-radius:999px;background:var(--lime);color:var(--lime-ink);margin-top:8px}
+@media (max-width:560px){.ev-big{grid-template-columns:1fr;gap:8px}}
+.timeline{display:grid;gap:0}
+.tl{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line)}
+.tl b{font-family:var(--display);font-weight:800;font-size:1.4rem;color:var(--pink)}
+.tl p{color:var(--ink-2)}
+.cater-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){.cater-grid{grid-template-columns:1fr}}
+.cater{background:var(--card);border:2px solid var(--ink);border-radius:var(--radius);padding:20px;display:grid;gap:8px;min-width:0}
+.cater ul{margin:0;padding-left:18px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <span><span class="dot">●</span> <span class="en">Open today 7 AM – 10 PM</span><span class="es">Abierto hoy 7 AM – 10 PM</span></span>
+  <span>2581 N Hiatus Rd, Cooper City · Embassy Lakes</span>
+  <span>(954) 228-0435</span>
+</div></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><img src="img/logo.jpg" alt="Flamingo Supermarkets logo">Flamingo</a>
+  <nav class="menu" aria-label="Main">
+    <a href="restaurants.html"><span class="en">Restaurants</span><span class="es">Restaurantes</span></a>
+    <a href="events.html"><span class="en">Events</span><span class="es">Eventos</span></a>
+    <a href="story.html"><span class="en">Our story &amp; catering</span><span class="es">Nuestra historia y catering</span></a>
+    <a class="ad" href="weekly-ad.html"><span class="en">Weekly ad</span><span class="es">Ofertas</span></a>
+    <a class="shop" href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener"><span class="en">Shop online</span><span class="es">Compra en línea</span></a>
+  </nav>
+  <button class="lang-btn" id="langBtn" type="button" aria-label="Cambiar idioma"><span class="en">ES</span><span class="es">EN</span></button>
+</div></header>
+<main>
+
+<section class="page-hero" style="text-align:center;padding-bottom:8px"><div class="wrap" style="max-width:560px">
+  <img src="img/logo.jpg" alt="Flamingo Supermarkets" style="width:96px;height:96px;border-radius:50%;border:3px solid var(--ink);margin:0 auto 12px;display:block">
+  <h1 style="font-size:2rem">Flamingo Supermarket</h1>
+  <p style="margin:6px auto 0"><span class="en">Cooper City's international supermarket &amp; eatery · Open daily 7 AM – 10 PM</span><span class="es">El supermercado internacional y comedor de Cooper City · Diario 7 AM – 10 PM</span></p>
+</div></section>
+<section class="sec" style="padding-top:16px"><div class="wrap linklist">
+  <a class="linkbtn hot" href="weekly-ad.html">🏷️ <span class="en">This week's ad &amp; deals</span><span class="es">Ofertas de la semana</span></a>
+  <a class="linkbtn" href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener">🛒 <span class="en">Shop online · pickup, delivery or ship nationwide</span><span class="es">Compra en línea · recoger, entrega o envío nacional</span></a>
+  <a class="linkbtn" href="restaurants.html">🍽️ <span class="en">Restaurants &amp; menus</span><span class="es">Restaurantes y menús</span></a>
+  <a class="linkbtn" href="events.html#poll">🎃 <span class="en">Halloween Oct 31 · costume contest at noon</span><span class="es">Halloween 31 oct · concurso de disfraces al mediodía</span></a>
+  <a class="linkbtn" href="https://www.tickeri.com/events/2y4asqukirjn/tiko-tiko" target="_blank" rel="noopener">🎟️ <span class="en">Tiko Tiko live · Dec 6 · tickets</span><span class="es">Tiko Tiko en vivo · 6 dic · boletos</span></a>
+  <a class="linkbtn lime" href="https://docs.google.com/forms/d/e/1FAIpQLSe_nptyDl-53ThMydupMvIjCGKpHr3F6afdURFqvlBhSID4-w/viewform" target="_blank" rel="noopener">🥙 <span class="en">Vote: a Mediterranean grill at Flamingo?</span><span class="es">Vota: ¿un Mediterranean Grill en Flamingo?</span></a>
+  <a class="linkbtn" href="recipe.html">🍲 <span class="en">Recipe of the week</span><span class="es">Receta de la semana</span></a>
+  <a class="linkbtn" href="story.html#catering">🎉 <span class="en">Catering &amp; holiday packages</span><span class="es">Catering y paquetes festivos</span></a>
+  <a class="linkbtn" href="https://search.google.com/local/writereview?placeid=ChIJuR4mQQCn2YgRPWwsJYyKJrM" target="_blank" rel="noopener">⭐ <span class="en">Leave us a Google review</span><span class="es">Déjanos una reseña en Google</span></a>
+  <a class="linkbtn" href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener">📍 <span class="en">Directions · 2581 N Hiatus Rd</span><span class="es">Cómo llegar · 2581 N Hiatus Rd</span></a>
+  <a class="linkbtn" href="tel:+19542280435">📞 (954) 228-0435</a>
+  <div class="linksocial">
+    <a href="https://www.instagram.com/flamingo_supermarkets/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=61576623962537" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.tiktok.com/@flamingo.supermar" target="_blank" rel="noopener">TikTok</a>
+  </div>
+</div></section>
+
+</main>
+<footer><div class="wrap">
+  <div class="cols">
+    <div>
+      <img src="img/logo.jpg" alt="" style="width:64px;height:64px;border-radius:50%;margin-bottom:12px">
+      <p style="opacity:.85;max-width:30ch"><span class="en">Cooper City's international supermarket and eatery.</span><span class="es">El supermercado internacional y comedor de Cooper City.</span></p>
+      <ul style="margin-top:14px"><li><a href="https://www.instagram.com/flamingo_supermarkets/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/612159848655351" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.tiktok.com/@flamingo.supermar" target="_blank" rel="noopener">TikTok</a></li></ul>
+    </div>
+    <div><h4><span class="en">Visit</span><span class="es">Visítanos</span></h4><p>2581 N Hiatus Rd<br>Embassy Lakes Shopping Center<br>Cooper City, FL 33026</p><p style="margin-top:8px"><a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener"><span class="en">Directions →</span><span class="es">Cómo llegar →</span></a></p></div>
+    <div><h4><span class="en">Hours</span><span class="es">Horario</span></h4><p><span class="en">Open daily 7 AM – 10 PM</span><span class="es">Todos los días 7 AM – 10 PM</span></p><p style="margin-top:8px">(954) 228-0435<br>flamingosupermarkets@gmail.com</p></div>
+    <div><h4><span class="en">Explore</span><span class="es">Explora</span></h4><ul>
+      <li><a href="index.html"><span class="en">Home</span><span class="es">Inicio</span></a></li>
+      <li><a href="restaurants.html"><span class="en">Restaurants &amp; menus</span><span class="es">Restaurantes y menús</span></a></li>
+      <li><a href="events.html"><span class="en">Events</span><span class="es">Eventos</span></a></li>
+      <li><a href="story.html"><span class="en">Our story &amp; catering</span><span class="es">Historia y catering</span></a></li>
+      <li><a href="weekly-ad.html"><span class="en">Weekly ad</span><span class="es">Ofertas</span></a></li>
+      <li><a href="recipe.html"><span class="en">Recipe of the week</span><span class="es">Receta de la semana</span></a></li>
+      <li><a href="https://search.google.com/local/writereview?placeid=ChIJuR4mQQCn2YgRPWwsJYyKJrM" target="_blank" rel="noopener"><span class="en">Leave a Google review</span><span class="es">Déjanos una reseña en Google</span></a></li>
+      <li><a href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener"><span class="en">Shop online</span><span class="es">Compra en línea</span></a></li>
+    </ul></div>
+  </div>
+  <div class="legal"><span>© 2026 Flamingo Supermarkets</span><span><span class="en">Cooper City, Florida</span><span class="es">Cooper City, Florida</span></span></div>
+</div></footer>
+<nav class="actionbar" aria-label="Quick actions">
+  <a href="tel:+19542280435">📞 <span class="en">Call</span><span class="es">Llamar</span></a>
+  <a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener">📍 <span class="en">Directions</span><span class="es">Cómo llegar</span></a>
+  <a href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener">🛒 <span class="en">Shop</span><span class="es">Comprar</span></a>
+</nav>
+<script>
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+if(!location.hash){window.scrollTo(0,0);addEventListener('pageshow',()=>window.scrollTo(0,0));try{if(parent!==window)parent.scrollTo(0,0)}catch(e){}}
+(function(){
+  var root=document.documentElement;
+  function setLang(l){root.setAttribute('lang',l);try{localStorage.setItem('flamingo-lang',l)}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('flamingo-lang')}catch(e){}
+  if(!saved){saved=(navigator.language||'').toLowerCase().indexOf('es')===0?'es':'en'}
+  setLang(saved);
+  document.getElementById('langBtn').addEventListener('click',function(){setLang(root.getAttribute('lang')==='es'?'en':'es')});
+})();
+</script>
+</body>
+</html>
