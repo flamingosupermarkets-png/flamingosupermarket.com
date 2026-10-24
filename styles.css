@@ -55,7 +55,8 @@ html[lang="es"] .en, html:not([lang="es"]) .es{display:none !important}
 .menu a{text-decoration:none;font-weight:600;padding:.5em .8em;border-radius:999px}
 .menu a:hover{background:var(--cream-2)}
 .menu a.shop{background:var(--lime);color:var(--lime-ink);font-weight:800}
-@media (max-width:900px){.menu a:not(.shop){display:none}}
+.menu a.ad{background:var(--sun);color:var(--sun-ink);font-weight:800}
+@media (max-width:900px){.menu a:not(.shop):not(.ad){display:none}.menu{gap:6px}.menu a.shop,.menu a.ad{padding:.5em .7em;font-size:.9rem}}
 
 /* hero */
 .hero{padding-block:40px 56px;position:relative;overflow:hidden}
@@ -183,7 +184,7 @@ footer .legal{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255
 .hero-cine .eyebrow{color:var(--lime)}
 .hero-cine h1{font-size:clamp(2.8rem,8.4vw,6.4rem);line-height:.95;letter-spacing:-.03em;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35)}
 .hero-cine h1 em{font-style:normal;color:var(--lime)}
-.hero-cine .lede{color:rgba(255,244,228,.85);font-size:1.15rem;max-width:46ch}
+.hero-cine .lede{color:#fff;font-size:1.2rem;font-weight:500;max-width:46ch;text-shadow:0 1px 12px rgba(0,0,0,.45)}
 .hero-cine .hero-copy>*{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
 .hero-cine .hero-copy>*:nth-child(2){animation-delay:.08s}.hero-cine .hero-copy>*:nth-child(3){animation-delay:.16s}.hero-cine .hero-copy>*:nth-child(4){animation-delay:.24s}
 @keyframes rise{from{transform:translateY(22px);opacity:.01}to{transform:none;opacity:1}}
