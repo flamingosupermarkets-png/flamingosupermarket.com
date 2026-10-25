@@ -358,3 +358,27 @@ footer .legal{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255
 .hcane-tips{margin-top:40px;max-width:760px}
 .hcane-tips h2{font-size:1.5rem;margin:24px 0 10px}
 .hcane-tips ul{padding-left:20px;display:grid;gap:8px;color:var(--ink-2)}
+/* blog */
+.post{padding-block:48px 64px}
+.post-wrap{max-width:760px}
+.post h1{font-size:clamp(2rem,5vw,3rem);margin:8px 0 10px;line-height:1.08}
+.post-meta{color:var(--ink-2);font-size:.9rem;display:block}
+.post-hero{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);border:3px solid var(--ink);margin:20px 0 28px;box-shadow:8px 8px 0 var(--pink)}
+.post h2{font-size:1.5rem;margin:30px 0 10px}
+.post p,.post li{font-size:1.08rem;line-height:1.65;color:var(--ink)}
+.post .lede-p{font-size:1.2rem;font-weight:500}
+.post ul{padding-left:22px;display:grid;gap:8px}
+.post-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.post-gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;border:2px solid var(--ink)}
+.post-card{display:grid;grid-template-rows:200px auto;background:var(--card);border:2px solid var(--ink);border-radius:var(--radius);overflow:hidden;color:var(--ink);text-decoration:none;min-width:0}
+.post-card img{width:100%;height:200px;object-fit:cover}
+.post-card .body{padding:16px}
+.post-card h3{font-size:1.1rem;margin:6px 0 0}
+.post-banner{padding-block:0 56px}
+.post-banner a{display:grid;grid-template-columns:200px 1fr;gap:22px;align-items:center;background:#3A1430;color:var(--cream);border:3px solid var(--ink);border-radius:var(--radius);overflow:hidden;text-decoration:none;box-shadow:8px 8px 0 var(--sun)}
+.post-banner img{width:200px;height:100%;min-height:160px;object-fit:cover}
+.post-banner .eyebrow{color:var(--sun)}
+.post-banner h3{font-size:1.3rem;margin:6px 0 8px;color:var(--cream)}
+.post-banner div{padding:18px 20px 18px 0}
+.post-link{font-weight:700;color:var(--lime)}
+@media (max-width:640px){.post-banner a{grid-template-columns:1fr}.post-banner img{width:100%;height:180px}.post-banner div{padding:16px}.post-gallery{grid-template-columns:1fr}}
