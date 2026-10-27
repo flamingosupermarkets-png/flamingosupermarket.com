@@ -14,6 +14,10 @@
 <script>document.addEventListener("click",function(e){var a=e.target.closest("a");if(!a)return;var h=a.getAttribute("href")||"",n="";if(h.indexOf("tel:")===0)n="call_tap";else if(h.indexOf("review")===0)n="review_tap";else if(h.indexOf("weekly-ad")===0)n="weekly_ad_open";else if(h.indexOf("recipe")===0)n="recipe_open";else if(h.indexOf("docs.google.com/forms")>-1)n="survey_open";else if(h.indexOf("myshopify")>-1)n="shop_open";else if(h.indexOf("maps.app")>-1||h.indexOf("google.com/maps")>-1)n="directions_tap";else if(h.indexOf("blog")===0)n="blog_open";else if(h.indexOf("search.google.com/local/writereview")>-1)n="google_review_submit";if(!n)return;if(window.gtag)gtag("event",n,{link:h});if(window.fbq)fbq("trackCustom",n,{link:h});},true);</script>
 <meta name="description" content="A family dinner recipe built from this week's sale items at Flamingo Supermarket, Cooper City. New recipe every Wednesday.">
 <link rel="canonical" href="https://flamingosupermarket.com/recipe.html">
+<link rel="alternate" hreflang="en" href="https://flamingosupermarket.com/recipe.html">
+<link rel="alternate" hreflang="es" href="https://flamingosupermarket.com/es/recipe.html">
+<link rel="alternate" hreflang="x-default" href="https://flamingosupermarket.com/recipe.html">
+
 <meta property="og:title" content="Recipe of the Week · Flamingo Supermarket">
 <meta property="og:description" content="A family dinner recipe built from this week's sale items at Flamingo Supermarket, Cooper City. New recipe every Wednesday.">
 <meta property="og:image" content="https://flamingosupermarket.com/img/hero.jpg">
@@ -177,7 +181,7 @@
       <p style="opacity:.85;max-width:30ch"><span class="en">Cooper City's international supermarket and eatery.</span><span class="es">El supermercado internacional y comedor de Cooper City.</span></p>
       <ul style="margin-top:14px"><li><a href="https://www.instagram.com/flamingo_supermarkets/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/612159848655351" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.tiktok.com/@flamingo.supermar" target="_blank" rel="noopener">TikTok</a></li></ul>
     </div>
-    <div><h4><span class="en">Visit</span><span class="es">Visítanos</span></h4><p>2581 N Hiatus Rd<br>Embassy Lakes Shopping Center<br>Cooper City, FL 33026</p><p style="margin-top:8px"><a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener"><span class="en">Directions →</span><span class="es">Cómo llegar →</span></a></p></div>
+    <div><h4><span class="en">Visit</span><span class="es">Visítanos</span></h4><p>2581 N Hiatus Rd<br>Embassy Lakes Shopping Center<br>Cooper City, FL 33026</p><p style="margin-top:8px"><a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener"><span class="en">Directions →</span><span class="es">Cómo llegar →</span></a></p><p style="margin-top:6px;font-size:.85rem;opacity:.85"><span class="en">Near <a href="supermarket-pembroke-pines.html">Pembroke Pines</a>, <a href="supermarket-davie.html">Davie</a>, <a href="supermarket-hollywood.html">Hollywood</a> &amp; <a href="supermarket-weston.html">Weston</a></span><span class="es">Cerca de <a href="supermarket-pembroke-pines.html">Pembroke Pines</a>, <a href="supermarket-davie.html">Davie</a>, <a href="supermarket-hollywood.html">Hollywood</a> y <a href="supermarket-weston.html">Weston</a></span></p></div>
     <div><h4><span class="en">Hours</span><span class="es">Horario</span></h4><p><span class="en">Open daily 7 AM – 10 PM</span><span class="es">Todos los días 7 AM – 10 PM</span></p><p style="margin-top:8px">(954) 228-0435<br>flamingosupermarkets@gmail.com</p></div>
     <div><h4><span class="en">Explore</span><span class="es">Explora</span></h4><ul>
       <li><a href="index.html"><span class="en">Home</span><span class="es">Inicio</span></a></li>
@@ -189,6 +193,8 @@
       <li><a href="review.html"><span class="en">Leave us a review</span><span class="es">Déjanos una reseña</span></a></li>
       <li><a href="hurricane.html"><span class="en">Hurricane prep guide</span><span class="es">Guía para huracanes</span></a></li>
       <li><a href="blog.html"><span class="en">Blog</span><span class="es">Blog</span></a></li>
+      <li><a href="ecuadorian-food-cooper-city.html"><span class="en">Ecuadorian food guide</span><span class="es">Guía de comida ecuatoriana</span></a></li>
+      <li><a href="colada-morada-guaguas-de-pan.html"><span class="en">Colada morada &amp; guaguas</span><span class="es">Colada morada y guaguas</span></a></li>
       <li><a href="https://flamingo-supermarkets.myshopify.com/collections/ecuador" target="_blank" rel="noopener"><span class="en">Shop online</span><span class="es">Compra en línea</span></a></li>
     </ul></div>
   </div>
@@ -207,8 +213,9 @@ if(!location.hash){window.scrollTo(0,0);addEventListener('pageshow',()=>window.s
   function setLang(l){root.setAttribute('lang',l);try{localStorage.setItem('flamingo-lang',l)}catch(e){}}
   var saved=null;try{saved=localStorage.getItem('flamingo-lang')}catch(e){}
   if(!saved){saved=(navigator.language||'').toLowerCase().indexOf('es')===0?'es':'en'}
-  setLang(saved);
-  document.getElementById('langBtn').addEventListener('click',function(){setLang(root.getAttribute('lang')==='es'?'en':'es')});
+  if(saved==='es'&&!/[?&]lang=en/.test(location.search)){location.replace('https://flamingosupermarket.com/es/recipe.html'+location.hash);return}
+  setLang('en');
+  document.getElementById('langBtn').addEventListener('click',function(){setLang('es');location.href='https://flamingosupermarket.com/es/recipe.html'+location.hash});
 })();
 </script>
 </body>
