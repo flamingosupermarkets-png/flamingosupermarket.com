@@ -411,3 +411,9 @@ footer .legal{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255
 .hw small.fine{display:block;opacity:.7;margin-top:14px;font-size:.85rem}
 @media (max-width:860px){.hw-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.hw-grid{grid-template-columns:1fr}.hw::before{font-size:8rem}}
+.hw-cookies{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+.hw-cookies img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px;border:2px solid #FF9F1C;display:block}
+.hw-cookies-cap{margin-top:10px;opacity:.85;font-size:.95rem}
+@media (max-width:560px){.hw-cookies{grid-template-columns:repeat(2,1fr)}}
+.post-gallery.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:640px){.post-gallery.g4{grid-template-columns:1fr 1fr}}
