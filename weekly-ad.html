@@ -156,7 +156,7 @@ if(!location.hash){window.scrollTo(0,0);addEventListener('pageshow',()=>window.s
   function setLang(l){root.setAttribute('lang',l);try{localStorage.setItem('flamingo-lang',l)}catch(e){}}
   var saved=null;try{saved=localStorage.getItem('flamingo-lang')}catch(e){}
   if(!saved){saved=(navigator.language||'').toLowerCase().indexOf('es')===0?'es':'en'}
-  if(saved==='es'&&!/[?&]lang=en/.test(location.search)){location.replace('https://flamingosupermarket.com/es/weekly-ad.html'+location.hash);return}
+  if(saved==='es'&&!/[?&]lang=en/.test(location.search)){location.replace('https://flamingosupermarket.com/es/weekly-ad.html'+location.search+location.hash);return}
   setLang('en');
   document.getElementById('langBtn').addEventListener('click',function(){setLang('es');location.href='https://flamingosupermarket.com/es/weekly-ad.html'+location.hash});
 })();
