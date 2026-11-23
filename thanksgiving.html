@@ -47,6 +47,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:800;line-height:1.02;letter-spacin
 .hero .bg{position:absolute;inset:0;z-index:-2;background:radial-gradient(80% 70% at 85% 15%,rgba(232,176,75,.28),transparent 60%),radial-gradient(70% 60% at 0% 100%,rgba(232,20,139,.22),transparent 60%),linear-gradient(160deg,#4A1B25,#2A0E14 70%)}
 .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%;transform:scale(1.06);animation:slowzoom 18s ease-out forwards}
 @keyframes slowzoom{to{transform:scale(1)}}
+.hero .bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 40%;opacity:.38}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(42,14,20,.55) 0%,rgba(42,14,20,.15) 35%,rgba(42,14,20,.85) 72%,var(--wine) 100%)}
 .hero .in{padding:0 0 56px}
 .kicker{display:inline-flex;gap:10px;align-items:center;font:700 .8rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-2)}
@@ -164,7 +165,7 @@ footer a{color:var(--gold-2)}
 </header>
 
 <section class="hero">
-  <div class="bg"></div>
+  <div class="bg"><img src="img/tg/tg-hero-turkey-2026-11-23.jpg" alt=""></div>
   <div class="wrap in">
     <span class="kicker">Thanksgiving 2026 · Cooper City</span>
     <h1>Thanksgiving, <b>handled.</b></h1>
