@@ -214,6 +214,8 @@ footer .legal{margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-block:28px}
 @media (max-width:760px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
 .stat{display:grid;gap:2px;border-left:3px solid var(--lime);padding-left:14px}
+a.stat{text-decoration:none;color:inherit}
+a.stat:hover span{text-decoration:underline;text-underline-offset:3px}
 .stat b{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1;font-variant-numeric:tabular-nums;color:#fff}
 .stat span{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff}
 
