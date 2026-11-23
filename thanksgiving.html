@@ -40,6 +40,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:800;line-height:1.02;letter-spacin
 .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 1.25rem/1 var(--serif)}
 .brand img{width:40px;height:40px;border-radius:50%;border:2px solid var(--gold)}
+.navr{display:flex;align-items:center;gap:14px}
+.lang{display:inline-flex;border:1.5px solid rgba(246,207,122,.55);border-radius:999px;padding:3px;background:rgba(26,10,13,.35)}
+.lang button{all:unset;cursor:pointer;font:800 .85rem/1 var(--sans);letter-spacing:.06em;padding:.55em .9em;border-radius:999px;color:var(--cream)}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--ink)}
+.lang button:focus-visible{outline:2px solid var(--gold-2);outline-offset:2px}
+@media(max-width:600px){.nav .ctxt{display:none}}
 .nav .call{font-weight:700;text-decoration:none;font-size:.95rem;opacity:.9}
 
 /* hero */
@@ -155,151 +161,152 @@ footer a{color:var(--gold-2)}
 </head>
 <body>
 <div class="strip"><div class="wrap">
-  <span class="full">🦃 Thanksgiving pickup · Thu Nov 26 · 10 AM – 5 PM</span>
+  <span class="full" data-es="🦃 Recogida de Thanksgiving · jue 26 nov · 10 AM – 5 PM">🦃 Thanksgiving pickup · Thu Nov 26 · 10 AM – 5 PM</span>
   <span class="cd" id="stripCd">Order online by Wed 8 PM</span>
 </div></div>
 
 <header class="wrap nav">
   <a class="brand" href="index.html"><img src="img/logo.jpg" alt="Flamingo Supermarket">Flamingo</a>
-  <a class="call" href="tel:+19542280435">📞 (954) 228-0435</a>
+  <div class="navr"><div class="lang" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button></div>
+  <a class="call" href="tel:+19542280435">📞 <span class="ctxt">(954) 228-0435</span></a></div>
 </header>
 
 <section class="hero">
   <div class="bg"><img src="img/tg/tg-hero-turkey-2026-11-23.jpg" alt=""></div>
   <div class="wrap in">
-    <span class="kicker">Thanksgiving 2026 · Cooper City</span>
-    <h1>Thanksgiving, <b>handled.</b></h1>
-    <p class="lead">Turkey, roast pork, pineapple ham, trays, sides and dessert, cooked in our kitchen. Order online now and pick it up hot on Thanksgiving Day.</p>
+    <span class="kicker" data-es="Thanksgiving 2026 · Cooper City">Thanksgiving 2026 · Cooper City</span>
+    <h1 data-es="Thanksgiving, &lt;b&gt;resuelto.&lt;/b&gt;">Thanksgiving, <b>handled.</b></h1>
+    <p class="lead" data-es="Pavo, cerdo asado, jamón con piña, bandejas, acompañantes y postres, hechos en nuestra cocina. Ordena en línea ahora y recógelo calientito el Día de Thanksgiving.">Turkey, roast pork, pineapple ham, trays, sides and dessert, cooked in our kitchen. Order online now and pick it up hot on Thanksgiving Day.</p>
     <ul class="facts">
-      <li><b>Pickup</b> Thu Nov 26 · 10 AM–5 PM</li>
-      <li><b>Pay</b> in full or 50% deposit</li>
-      <li><b>Feeds</b> 6 to 35+</li>
+      <li data-es="&lt;b&gt;Recogida&lt;/b&gt; jue 26 nov · 10 AM–5 PM"><b>Pickup</b> Thu Nov 26 · 10 AM–5 PM</li>
+      <li data-es="&lt;b&gt;Paga&lt;/b&gt; completo o 50% de depósito"><b>Pay</b> in full or 50% deposit</li>
+      <li data-es="&lt;b&gt;Para&lt;/b&gt; 6 a 35+ personas"><b>Feeds</b> 6 to 35+</li>
     </ul>
     <div class="ctas">
-      <a class="btn btn-gold" href="#combos" data-ev="tg_cta_menu">Order now →</a>
-      <a class="btn btn-ghost" href="tel:+19542280435">Call to order</a>
+      <a class="btn btn-gold" href="#combos" data-ev="tg_cta_menu" data-es="Ordenar ahora →">Order now →</a>
+      <a class="btn btn-ghost" href="tel:+19542280435" data-es="Llama para ordenar">Call to order</a>
     </div>
     <div class="count" id="count" aria-live="polite">
-      <span class="lbl">Ordering closes in</span>
-      <div class="u"><b id="cdD">–</b><small>days</small></div>
-      <div class="u"><b id="cdH">–</b><small>hrs</small></div>
-      <div class="u"><b id="cdM">–</b><small>min</small></div>
-      <div class="u"><b id="cdS">–</b><small>sec</small></div>
+      <span class="lbl" data-es="Los pedidos cierran en">Ordering closes in</span>
+      <div class="u"><b id="cdD">–</b><small data-es="días">days</small></div>
+      <div class="u"><b id="cdH">–</b><small data-es="hrs">hrs</small></div>
+      <div class="u"><b id="cdM">–</b><small data-es="min">min</small></div>
+      <div class="u"><b id="cdS">–</b><small data-es="seg">sec</small></div>
     </div>
   </div>
 </section>
 
 <div class="wrap steps">
-  <div class="step"><div class="n">1</div><h3>Pick your feast</h3><p>A complete dinner, catering trays, sides, desserts. Mix and match.</p></div>
-  <div class="step"><div class="n">2</div><h3>Pay your way</h3><p>Pay in full, or put down 50% now and pay the rest at pickup. Secure checkout by Square.</p></div>
-  <div class="step"><div class="n">3</div><h3>Pick it up Thursday</h3><p>Thanksgiving Day, 10 AM–5 PM, at 2581 N Hiatus Rd, Cooper City.</p></div>
+  <div class="step"><div class="n">1</div><h3 data-es="Escoge tu banquete">Pick your feast</h3><p data-es="Una cena completa, bandejas, acompañantes, postres. Combina como quieras.">A complete dinner, catering trays, sides, desserts. Mix and match.</p></div>
+  <div class="step"><div class="n">2</div><h3 data-es="Paga a tu manera">Pay your way</h3><p data-es="Paga completo, o deja 50% ahora y paga el resto al recoger. Pago seguro con Square.">Pay in full, or put down 50% now and pay the rest at pickup. Secure checkout by Square.</p></div>
+  <div class="step"><div class="n">3</div><h3 data-es="Recógelo el jueves">Pick it up Thursday</h3><p data-es="Día de Thanksgiving, 10 AM–5 PM, en 2581 N Hiatus Rd, Cooper City.">Thanksgiving Day, 10 AM–5 PM, at 2581 N Hiatus Rd, Cooper City.</p></div>
 </div>
 
-<nav class="chips" aria-label="Menu sections"><div class="wrap"><a href="#combos">Thanksgiving dinners</a><a href="#trays">Catering trays</a><a href="#sides">Sides</a><a href="#roasts">Whole roasts</a><a href="#lb">By the pound</a><a href="#desserts">Desserts</a></div></nav>
+<nav class="chips" aria-label="Menu sections"><div class="wrap"><a href="#combos" data-es="Cenas de Thanksgiving">Thanksgiving dinners</a><a href="#trays" data-es="Bandejas de catering">Catering trays</a><a href="#sides" data-es="Acompañantes">Sides</a><a href="#roasts" data-es="Asados enteros">Whole roasts</a><a href="#lb" data-es="Por libra">By the pound</a><a href="#desserts" data-es="Postres">Desserts</a></div></nav>
 
-<section class="sec" id="combos"><div class="wrap"><div class="sh"><h2>Thanksgiving dinners</h2><p>Everything for the table in one order: the main plus two sides.</p></div>
-<div class="grid big"><article class="item"><em class="tag">Most popular</em><div class="body"><h3>Turkey Dinner</h3><p class="d">Oven-roasted turkey with two sides of your choice.</p><ul class="pr"><li><span>Half turkey + 2 small sides</span><b>$100</b></li><li><span>Whole turkey + 2 medium sides</span><b>$160</b></li><li><span>2 whole turkeys + 2 large sides</span><b>$310</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=KH62KQ33JX5IHVANFPGLHL5S&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Turkey Dinner" data-sec="combos">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Roast Pork Dinner</h3><p class="d">Our slow-roasted pork with two sides.</p><ul class="pr"><li><span>Small · feeds 6</span><b>$85</b></li><li><span>Medium · feeds 15</span><b>$155</b></li><li><span>Large · feeds 35</span><b>$280</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=KEZNKLBX7PGCGUXZO3H4QXHX&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Roast Pork Dinner" data-sec="combos">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Pineapple Ham Dinner</h3><p class="d">Glazed pineapple ham with two sides.</p><ul class="pr"><li><span>Small · feeds 6</span><b>$110</b></li><li><span>Medium · feeds 15</span><b>$180</b></li><li><span>Large · feeds 35</span><b>$350</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=WPQNKZV5JSBX6QIBD6HGZ6VK&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Pineapple Ham Dinner" data-sec="combos">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
-<section class="sec" id="trays"><div class="wrap"><div class="sh"><h2>Catering trays</h2><p>Small feeds 6 · Medium feeds 15 · Large feeds 35.</p></div>
-<div class="grid"><article class="item"><div class="body"><h3>Roast Pork (Cerdo Asado)</h3><ul class="pr"><li><span>Small · 6</span><b>$35</b></li><li><span>Medium · 15</span><b>$65</b></li><li><span>Large · 35</span><b>$130</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=IEIPYJT5XXXDH4MLI5ZS664B&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Roast Pork (Cerdo Asado)" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Steak &amp; Onions (Bistec Encebollado)</h3><ul class="pr"><li><span>Small · 6</span><b>$65</b></li><li><span>Medium · 15</span><b>$125</b></li><li><span>Large · 35</span><b>$240</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=D3BHHETNOQ236AW2OLRT73SR&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Steak &amp; Onions (Bistec Encebollado)" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Beef Stew (Carne con Papas)</h3><ul class="pr"><li><span>Small · 6</span><b>$65</b></li><li><span>Medium · 15</span><b>$125</b></li><li><span>Large · 35</span><b>$240</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=LASRBBLL7OHS2WHWHQOKQZSS&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Beef Stew (Carne con Papas)" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Ropa Vieja</h3><ul class="pr"><li><span>Small · 6</span><b>$65</b></li><li><span>Medium · 15</span><b>$125</b></li><li><span>Large · 35</span><b>$240</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=Z3LXBSLYTTCS3AFLB652UZCZ&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Ropa Vieja" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Stew Chicken (Pollo Guisado)</h3><ul class="pr"><li><span>Small · 6</span><b>$40</b></li><li><span>Medium · 15</span><b>$75</b></li><li><span>Large · 35</span><b>$135</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=YHSDQ4Z3ISUK4XYXNUV6PYT4&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Stew Chicken (Pollo Guisado)" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Oven-Roasted Chicken (Pollo Asado)</h3><ul class="pr"><li><span>Small · 6</span><b>$40</b></li><li><span>Medium · 15</span><b>$75</b></li><li><span>Large · 35</span><b>$135</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=DKBNC5WL4D5LU7EAIQ2LCVUL&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Oven-Roasted Chicken (Pollo Asado)" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Seared Chicken Breast</h3><ul class="pr"><li><span>Small · 6</span><b>$70</b></li><li><span>Medium · 15</span><b>$120</b></li><li><span>Large · 35</span><b>$240</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=MIOE4GW7HYG6ZNFBXB6IATRQ&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Seared Chicken Breast" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Pork Ribs (Costillas)</h3><ul class="pr"><li><span>Small · 6</span><b>$40</b></li><li><span>Medium · 15</span><b>$80</b></li><li><span>Large · 35</span><b>$150</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=I77YWFIDW4C6LZBWSFSXONO3&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Pork Ribs (Costillas)" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Lasagna</h3><ul class="pr"><li><span>Small · 6</span><b>$40</b></li><li><span>Medium · 15</span><b>$80</b></li><li><span>Large · 35</span><b>$140</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=NC2C7XZFJTG4AHVDOXUPCIC7&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Lasagna" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Baked Ziti</h3><ul class="pr"><li><span>Small · 6</span><b>$40</b></li><li><span>Medium · 15</span><b>$80</b></li><li><span>Large · 35</span><b>$140</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=E6LRDHMLJTMMT3GXASDVJWQ2&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Baked Ziti" data-sec="trays">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
-<section class="sec" id="sides"><div class="wrap"><div class="sh"><h2>Sides</h2><p>Small feeds 6 · Medium feeds 15 · Large feeds 35.</p></div>
-<div class="grid"><article class="item"><div class="body"><h3>Congri or Arroz con Gandules</h3><ul class="pr"><li><span>Small · 6</span><b>$30</b></li><li><span>Medium · 15</span><b>$45</b></li><li><span>Large · 35</span><b>$85</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=GQPX6FMBSSDFFEFGQEBVH7PB&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Congri or Arroz con Gandules" data-sec="sides">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>White Rice</h3><ul class="pr"><li><span>Small · 6</span><b>$20</b></li><li><span>Medium · 15</span><b>$35</b></li><li><span>Large · 35</span><b>$75</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=XUTBGCZEA7SF5SWGYTCKNZIM&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="White Rice" data-sec="sides">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Imperial Rice</h3><ul class="pr"><li><span>Small · 6</span><b>$40</b></li><li><span>Medium · 15</span><b>$80</b></li><li><span>Large · 35</span><b>$140</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=6Z6MJ454DJBYD34UTWSQOBO3&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Imperial Rice" data-sec="sides">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Mangú</h3><ul class="pr"><li><span>Small · 6</span><b>$40</b></li><li><span>Medium · 15</span><b>$70</b></li><li><span>Large · 35</span><b>$145</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=FYWNKOZ2IAA3IAQTXQM7BGFT&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Mangú" data-sec="sides">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Yuca, Mashed Potatoes, Sweet Plantains, Potato Salad or Green Salad</h3><ul class="pr"><li><span>Small · 6</span><b>$30</b></li><li><span>Medium · 15</span><b>$45</b></li><li><span>Large · 35</span><b>$85</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=7I246WKRU6DJUFG754A6CT24&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Yuca, Mashed Potatoes, Sweet Plantains, Potato Salad or Green Salad" data-sec="sides">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Mac &amp; Cheese</h3><ul class="pr"><li><span>Small · 6</span><b>$30</b></li><li><span>Medium · 15</span><b>$60</b></li><li><span>Large · 35</span><b>$120</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=W63BPS637NSXX2TQTQBAI2EA&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Mac &amp; Cheese" data-sec="sides">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Beans (Frijoles) · 32 oz</h3><ul class="pr"><li><span>32 oz</span><b>$9.99</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=BX4C2BMPXX3BJGDP62GMOS36&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Beans (Frijoles) · 32 oz" data-sec="sides">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Lentils (Lentejas) · 32 oz</h3><ul class="pr"><li><span>32 oz</span><b>$9.99</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=MFQPCGGUVK5GLZX4YM3LHR5Q&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Lentils (Lentejas) · 32 oz" data-sec="sides">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
-<section class="sec" id="roasts"><div class="wrap"><div class="sh"><h2>Whole roasts</h2><p>Carve it at home.</p></div>
-<div class="grid"><article class="item"><div class="body"><h3>Whole Roasted Turkey</h3><ul class="pr"><li><span>Whole</span><b>$75</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=6NTNJL3NY65UDGZVVIGGI4LN&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Whole Roasted Turkey" data-sec="roasts">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Half Turkey</h3><ul class="pr"><li><span>Half</span><b>$40</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=FMFVOFLHYMBLQ5NQXWJSJACC&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Half Turkey" data-sec="roasts">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Whole Pork Leg (Pierna)</h3><ul class="pr"><li><span>Whole</span><b>$125</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=ABTFA7XPSQJUROFR46KVEU5N&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Whole Pork Leg (Pierna)" data-sec="roasts">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Whole Roasted Chicken</h3><ul class="pr"><li><span>Each</span><b>$9.99</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=HCVVXKUF4PKA5PGR53OUTNA4&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Whole Roasted Chicken" data-sec="roasts">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
-<section class="sec" id="lb"><div class="wrap"><div class="sh"><h2>By the pound</h2><p>Weighed at pickup. Ordering only this? Pay a $50 deposit now and the rest at pickup. Already ordering $50+ of other food? Choose “Pay at pickup”.</p></div>
-<div class="grid"><article class="item"><div class="body"><h3>Bone-In Pork Shoulder (Paleta)</h3><ul class="pr"><li><span>per lb</span><b>$6.99</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=CANZFIBTHIPGZ6MPGIOYKONS&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Bone-In Pork Shoulder (Paleta)" data-sec="lb">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Boneless Roast Pork</h3><ul class="pr"><li><span>per lb</span><b>$17.99</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=3C373G4AVXW3I7MDXFKSXXQ2&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Boneless Roast Pork" data-sec="lb">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Shredded Pork</h3><ul class="pr"><li><span>per lb</span><b>$8.99</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=JME5KMNLXYFDJ4ZSSQ5FGEMA&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Shredded Pork" data-sec="lb">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Pineapple Ham · Boneless</h3><ul class="pr"><li><span>per lb</span><b>$12.99</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=4PDNZO44O7UQDD75PMJYHLV3&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Pineapple Ham · Boneless" data-sec="lb">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Pineapple Ham · Bone-In</h3><ul class="pr"><li><span>per lb</span><b>$12.99</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=W2UNQD262VO45ALX2I5YNZ2E&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Pineapple Ham · Bone-In" data-sec="lb">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
-<section class="sec" id="desserts"><div class="wrap"><div class="sh"><h2>Desserts</h2><p>Save room.</p></div>
-<div class="grid"><article class="item"><div class="body"><h3>Flan</h3><p class="d">Homemade flan.</p><ul class="pr"><li><span>Small</span><b>$25</b></li><li><span>Medium</span><b>$35</b></li><li><span>Large</span><b>$50</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=IQGGZOAF7TETWSIWGDBW7SHF&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Flan" data-sec="desserts">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3>Beso de Ángel Cake</h3><p class="d">Whole cake.</p><ul class="pr"><li><span>Whole</span><b>$75</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=ZJZOJHU6I5WBUGAFP6ZRQEHU&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Beso de Ángel Cake" data-sec="desserts">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
+<section class="sec" id="combos"><div class="wrap"><div class="sh"><h2 data-es="Cenas de Thanksgiving">Thanksgiving dinners</h2><p data-es="Todo para la mesa en un solo pedido: el plato principal y dos acompañantes.">Everything for the table in one order: the main plus two sides.</p></div>
+<div class="grid big"><article class="item"><em class="tag" data-es="El más pedido">Most popular</em><div class="body"><h3 data-es="Cena de Pavo">Turkey Dinner</h3><p class="d" data-es="Pavo al horno con dos acompañantes a tu gusto.">Oven-roasted turkey with two sides of your choice.</p><ul class="pr"><li><span data-es="Mitad de pavo + 2 acompañantes chicos">Half turkey + 2 small sides</span><b>$100</b></li><li><span data-es="Pavo entero + 2 acompañantes medianos">Whole turkey + 2 medium sides</span><b>$160</b></li><li><span data-es="2 pavos enteros + 2 acompañantes grandes">2 whole turkeys + 2 large sides</span><b>$310</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=KH62KQ33JX5IHVANFPGLHL5S&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Turkey Dinner" data-sec="combos" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Cena de Cerdo Asado">Roast Pork Dinner</h3><p class="d" data-es="Nuestro cerdo asado lentamente con dos acompañantes.">Our slow-roasted pork with two sides.</p><ul class="pr"><li><span data-es="Chica · para 6">Small · feeds 6</span><b>$85</b></li><li><span data-es="Mediana · para 15">Medium · feeds 15</span><b>$155</b></li><li><span data-es="Grande · para 35">Large · feeds 35</span><b>$280</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=KEZNKLBX7PGCGUXZO3H4QXHX&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Roast Pork Dinner" data-sec="combos" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Cena de Jamón con Piña">Pineapple Ham Dinner</h3><p class="d" data-es="Jamón glaseado con piña y dos acompañantes.">Glazed pineapple ham with two sides.</p><ul class="pr"><li><span data-es="Chica · para 6">Small · feeds 6</span><b>$110</b></li><li><span data-es="Mediana · para 15">Medium · feeds 15</span><b>$180</b></li><li><span data-es="Grande · para 35">Large · feeds 35</span><b>$350</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=WPQNKZV5JSBX6QIBD6HGZ6VK&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Pineapple Ham Dinner" data-sec="combos" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
+<section class="sec" id="trays"><div class="wrap"><div class="sh"><h2 data-es="Bandejas de catering">Catering trays</h2><p data-es="Chica para 6 · Mediana para 15 · Grande para 35.">Small feeds 6 · Medium feeds 15 · Large feeds 35.</p></div>
+<div class="grid"><article class="item"><div class="body"><h3 data-es="Cerdo Asado">Roast Pork (Cerdo Asado)</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$35</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$65</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$130</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=IEIPYJT5XXXDH4MLI5ZS664B&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Roast Pork (Cerdo Asado)" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Bistec Encebollado">Steak &amp; Onions (Bistec Encebollado)</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$65</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$125</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$240</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=D3BHHETNOQ236AW2OLRT73SR&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Steak &amp; Onions (Bistec Encebollado)" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Carne con Papas">Beef Stew (Carne con Papas)</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$65</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$125</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$240</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=LASRBBLL7OHS2WHWHQOKQZSS&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Beef Stew (Carne con Papas)" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Ropa Vieja">Ropa Vieja</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$65</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$125</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$240</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=Z3LXBSLYTTCS3AFLB652UZCZ&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Ropa Vieja" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Pollo Guisado">Stew Chicken (Pollo Guisado)</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$40</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$75</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$135</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=YHSDQ4Z3ISUK4XYXNUV6PYT4&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Stew Chicken (Pollo Guisado)" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Pollo Asado al Horno">Oven-Roasted Chicken (Pollo Asado)</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$40</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$75</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$135</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=DKBNC5WL4D5LU7EAIQ2LCVUL&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Oven-Roasted Chicken (Pollo Asado)" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Pechuga a la Plancha">Seared Chicken Breast</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$70</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$120</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$240</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=MIOE4GW7HYG6ZNFBXB6IATRQ&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Seared Chicken Breast" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Costillas de Cerdo">Pork Ribs (Costillas)</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$40</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$80</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$150</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=I77YWFIDW4C6LZBWSFSXONO3&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Pork Ribs (Costillas)" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Lasaña">Lasagna</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$40</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$80</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$140</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=NC2C7XZFJTG4AHVDOXUPCIC7&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Lasagna" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Ziti al Horno">Baked Ziti</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$40</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$80</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$140</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=E6LRDHMLJTMMT3GXASDVJWQ2&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Baked Ziti" data-sec="trays" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
+<section class="sec" id="sides"><div class="wrap"><div class="sh"><h2 data-es="Acompañantes">Sides</h2><p data-es="Chica para 6 · Mediana para 15 · Grande para 35.">Small feeds 6 · Medium feeds 15 · Large feeds 35.</p></div>
+<div class="grid"><article class="item"><div class="body"><h3 data-es="Congrí o Arroz con Gandules">Congri or Arroz con Gandules</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$30</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$45</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$85</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=GQPX6FMBSSDFFEFGQEBVH7PB&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Congri or Arroz con Gandules" data-sec="sides" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Arroz Blanco">White Rice</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$20</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$35</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$75</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=XUTBGCZEA7SF5SWGYTCKNZIM&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="White Rice" data-sec="sides" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Arroz Imperial">Imperial Rice</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$40</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$80</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$140</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=6Z6MJ454DJBYD34UTWSQOBO3&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Imperial Rice" data-sec="sides" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Mangú">Mangú</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$40</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$70</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$145</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=FYWNKOZ2IAA3IAQTXQM7BGFT&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Mangú" data-sec="sides" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Yuca, Puré de Papas, Maduros, Ensalada de Papa o Ensalada Verde">Yuca, Mashed Potatoes, Sweet Plantains, Potato Salad or Green Salad</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$30</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$45</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$85</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=7I246WKRU6DJUFG754A6CT24&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Yuca, Mashed Potatoes, Sweet Plantains, Potato Salad or Green Salad" data-sec="sides" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Macarrones con Queso">Mac &amp; Cheese</h3><ul class="pr"><li><span data-es="Chica · 6">Small · 6</span><b>$30</b></li><li><span data-es="Mediana · 15">Medium · 15</span><b>$60</b></li><li><span data-es="Grande · 35">Large · 35</span><b>$120</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=W63BPS637NSXX2TQTQBAI2EA&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Mac &amp; Cheese" data-sec="sides" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Frijoles · 32 oz">Beans (Frijoles) · 32 oz</h3><ul class="pr"><li><span data-es="32 oz">32 oz</span><b>$9.99</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=BX4C2BMPXX3BJGDP62GMOS36&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Beans (Frijoles) · 32 oz" data-sec="sides" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Lentejas · 32 oz">Lentils (Lentejas) · 32 oz</h3><ul class="pr"><li><span data-es="32 oz">32 oz</span><b>$9.99</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=MFQPCGGUVK5GLZX4YM3LHR5Q&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Lentils (Lentejas) · 32 oz" data-sec="sides" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
+<section class="sec" id="roasts"><div class="wrap"><div class="sh"><h2 data-es="Asados enteros">Whole roasts</h2><p data-es="Para trinchar en casa.">Carve it at home.</p></div>
+<div class="grid"><article class="item"><div class="body"><h3 data-es="Pavo Entero Asado">Whole Roasted Turkey</h3><ul class="pr"><li><span data-es="Entero">Whole</span><b>$75</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=6NTNJL3NY65UDGZVVIGGI4LN&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Whole Roasted Turkey" data-sec="roasts" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Mitad de Pavo">Half Turkey</h3><ul class="pr"><li><span data-es="Mitad">Half</span><b>$40</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=FMFVOFLHYMBLQ5NQXWJSJACC&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Half Turkey" data-sec="roasts" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Pierna de Cerdo Entera">Whole Pork Leg (Pierna)</h3><ul class="pr"><li><span data-es="Entero">Whole</span><b>$125</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=ABTFA7XPSQJUROFR46KVEU5N&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Whole Pork Leg (Pierna)" data-sec="roasts" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Pollo Asado Entero">Whole Roasted Chicken</h3><ul class="pr"><li><span data-es="Cada uno">Each</span><b>$9.99</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=HCVVXKUF4PKA5PGR53OUTNA4&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Whole Roasted Chicken" data-sec="roasts" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
+<section class="sec" id="lb"><div class="wrap"><div class="sh"><h2 data-es="Por libra">By the pound</h2><p data-es="Se pesa al recoger. ¿Solo pides esto? Paga un depósito de $50 ahora y el resto al recoger. ¿Ya pides $50 o más de otra comida? Escoge “Pagar al recoger”.">Weighed at pickup. Ordering only this? Pay a $50 deposit now and the rest at pickup. Already ordering $50+ of other food? Choose “Pay at pickup”.</p></div>
+<div class="grid"><article class="item"><div class="body"><h3 data-es="Paleta de Cerdo con Hueso">Bone-In Pork Shoulder (Paleta)</h3><ul class="pr"><li><span data-es="por lb">per lb</span><b>$6.99</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=CANZFIBTHIPGZ6MPGIOYKONS&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Bone-In Pork Shoulder (Paleta)" data-sec="lb" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Cerdo Asado sin Hueso">Boneless Roast Pork</h3><ul class="pr"><li><span data-es="por lb">per lb</span><b>$17.99</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=3C373G4AVXW3I7MDXFKSXXQ2&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Boneless Roast Pork" data-sec="lb" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Cerdo Desmenuzado">Shredded Pork</h3><ul class="pr"><li><span data-es="por lb">per lb</span><b>$8.99</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=JME5KMNLXYFDJ4ZSSQ5FGEMA&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Shredded Pork" data-sec="lb" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Jamón con Piña · sin Hueso">Pineapple Ham · Boneless</h3><ul class="pr"><li><span data-es="por lb">per lb</span><b>$12.99</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=4PDNZO44O7UQDD75PMJYHLV3&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Pineapple Ham · Boneless" data-sec="lb" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Jamón con Piña · con Hueso">Pineapple Ham · Bone-In</h3><ul class="pr"><li><span data-es="por lb">per lb</span><b>$12.99</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=W2UNQD262VO45ALX2I5YNZ2E&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Pineapple Ham · Bone-In" data-sec="lb" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
+<section class="sec" id="desserts"><div class="wrap"><div class="sh"><h2 data-es="Postres">Desserts</h2><p data-es="Deja espacio.">Save room.</p></div>
+<div class="grid"><article class="item"><div class="body"><h3 data-es="Flan">Flan</h3><p class="d" data-es="Flan casero.">Homemade flan.</p><ul class="pr"><li><span data-es="Chico">Small</span><b>$25</b></li><li><span data-es="Mediano">Medium</span><b>$35</b></li><li><span data-es="Grande">Large</span><b>$50</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=IQGGZOAF7TETWSIWGDBW7SHF&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Flan" data-sec="desserts" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<article class="item"><div class="body"><h3 data-es="Cake Beso de Ángel">Beso de Ángel Cake</h3><p class="d" data-es="Cake entero.">Whole cake.</p><ul class="pr"><li><span data-es="Entero">Whole</span><b>$75</b></li></ul>
+<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=ZJZOJHU6I5WBUGAFP6ZRQEHU&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Beso de Ángel Cake" data-sec="desserts" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
 
 <section class="band"><div class="wrap">
   <div>
-    <span class="kicker">Good to know</span>
-    <h2>Order by Wednesday, Nov 25 at 8 PM.</h2>
+    <span class="kicker" data-es="Bueno saber">Good to know</span>
+    <h2 data-es="Ordena antes del miércoles 25 de noviembre a las 8 PM.">Order by Wednesday, Nov 25 at 8 PM.</h2>
     <ul>
-      <li>Ordering closes Wednesday at 8 PM, or sooner if our kitchen fills up. Don’t wait.</li>
-      <li>Every tray comes in three sizes: Small feeds 6, Medium feeds 15, Large feeds 35.</li>
-      <li>Choose “50% deposit” at checkout to pay half now and the rest when you pick up.</li>
-      <li>Meat by the pound is weighed at pickup.</li>
+      <li data-es="Los pedidos cierran el miércoles a las 8 PM, o antes si la cocina se llena. No esperes.">Ordering closes Wednesday at 8 PM, or sooner if our kitchen fills up. Don’t wait.</li>
+      <li data-es="Cada bandeja viene en tres tamaños: Chica para 6, Mediana para 15, Grande para 35.">Every tray comes in three sizes: Small feeds 6, Medium feeds 15, Large feeds 35.</li>
+      <li data-es="Escoge “50% deposit” al pagar para pagar la mitad ahora y el resto al recoger.">Choose “50% deposit” at checkout to pay half now and the rest when you pick up.</li>
+      <li data-es="La carne por libra se pesa al recoger.">Meat by the pound is weighed at pickup.</li>
     </ul>
-    <div class="ctas" style="margin-top:24px"><a class="btn btn-gold" href="https://flamingo-holiday-menu.square.site/s/order?utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Full menu" data-sec="band">See the full order menu →</a></div>
+    <div class="ctas" style="margin-top:24px"><a class="btn btn-gold" href="https://flamingo-holiday-menu.square.site/s/order?utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Full menu" data-sec="band" data-es="Ver el menú completo →">See the full order menu →</a></div>
   </div>
   
 </div></section>
 
 <section class="faq"><div class="wrap">
-  <h2 style="font-size:clamp(1.9rem,4.4vw,2.6rem);margin-bottom:18px">Questions</h2>
-  <details><summary>When and where do I pick up?</summary><p>Thanksgiving Day, Thursday Nov 26, between 10 AM and 5 PM at Flamingo Supermarket, 2581 N Hiatus Rd, Cooper City (Embassy Lakes Shopping Center). Bring your order confirmation.</p></details>
-  <details><summary>How does the 50% deposit work?</summary><p>When you choose a size, pick “50% deposit” and you pay half online. You pay the other half at pickup.</p></details>
-  <details><summary>How do the by-the-pound items work?</summary><p>We weigh them at pickup. If that’s all you’re ordering, pay a $50 deposit online. If your order already has $50 or more of other food, choose “Pay at pickup”.</p></details>
-  <details><summary>What’s the last day to order?</summary><p>Wednesday Nov 25 at 8 PM, or earlier if we sell out. If online ordering is closed, call us at (954) 228-0435 and we’ll see what we can do.</p></details>
-  <details><summary>Can I order something that isn’t on the list?</summary><p>Call or text us at (954) 228-0435. For big parties we can put together a custom package.</p></details>
+  <h2 style="font-size:clamp(1.9rem,4.4vw,2.6rem);margin-bottom:18px" data-es="Preguntas">Questions</h2>
+  <details><summary data-es="¿Cuándo y dónde recojo?">When and where do I pick up?</summary><p data-es="El Día de Thanksgiving, jueves 26 de noviembre, entre 10 AM y 5 PM en Flamingo Supermarket, 2581 N Hiatus Rd, Cooper City (Embassy Lakes Shopping Center). Trae tu confirmación del pedido.">Thanksgiving Day, Thursday Nov 26, between 10 AM and 5 PM at Flamingo Supermarket, 2581 N Hiatus Rd, Cooper City (Embassy Lakes Shopping Center). Bring your order confirmation.</p></details>
+  <details><summary data-es="¿Cómo funciona el depósito de 50%?">How does the 50% deposit work?</summary><p data-es="Cuando escojas el tamaño, selecciona “50% deposit” y pagas la mitad en línea. La otra mitad la pagas al recoger.">When you choose a size, pick “50% deposit” and you pay half online. You pay the other half at pickup.</p></details>
+  <details><summary data-es="¿Cómo funcionan los productos por libra?">How do the by-the-pound items work?</summary><p data-es="Los pesamos al recoger. Si es lo único que pides, paga un depósito de $50 en línea. Si tu pedido ya tiene $50 o más de otra comida, escoge “Pay at pickup” (pagar al recoger).">We weigh them at pickup. If that’s all you’re ordering, pay a $50 deposit online. If your order already has $50 or more of other food, choose “Pay at pickup”.</p></details>
+  <details><summary data-es="¿Cuál es el último día para ordenar?">What’s the last day to order?</summary><p data-es="El miércoles 25 de noviembre a las 8 PM, o antes si se agota. Si los pedidos en línea están cerrados, llámanos al (954) 228-0435 y haremos lo posible.">Wednesday Nov 25 at 8 PM, or earlier if we sell out. If online ordering is closed, call us at (954) 228-0435 and we’ll see what we can do.</p></details>
+  <details><summary data-es="¿Puedo pedir algo que no está en la lista?">Can I order something that isn’t on the list?</summary><p data-es="Llama o escríbenos al (954) 228-0435. Para fiestas grandes podemos armar un paquete especial.">Call or text us at (954) 228-0435. For big parties we can put together a custom package.</p></details>
 </div></section>
 
 <footer><div class="wrap"><div class="row">
   <div><strong style="color:var(--cream)">Flamingo Supermarket</strong><br>2581 N Hiatus Rd, Cooper City, FL 33026<br><a href="tel:+19542280435">(954) 228-0435</a></div>
-  <div><a href="catering-menu.html">Full catering menu</a> · <a href="index.html">Home</a> · <a href="https://www.instagram.com/flamingo_supermarkets/" target="_blank" rel="noopener">Instagram</a></div>
+  <div><a href="catering-menu.html" data-es="Menú de catering completo">Full catering menu</a> · <a href="index.html">Home</a> · <a href="https://www.instagram.com/flamingo_supermarkets/" target="_blank" rel="noopener">Instagram</a></div>
 </div></div></footer>
 
 <div class="bar" id="bar">
-  <div class="t">Thanksgiving dinner<small id="barCd">Order by Wed 8 PM</small></div>
-  <a class="btn btn-gold" href="#combos" data-ev="tg_bar">Order now</a>
+  <div class="t"><span data-es="Cena de Thanksgiving">Thanksgiving dinner</span><small id="barCd">Order by Wed 8 PM</small></div>
+  <a class="btn btn-gold" href="#combos" data-ev="tg_bar" data-es="Ordenar">Order now</a>
 </div>
 
 <script>
@@ -320,24 +327,46 @@ footer a{color:var(--gold-2)}
   },true);
 
   // countdown to Wed Nov 25 2026 8:00 PM Eastern
+  // language switch (EN / ES)
+  var LANG="en";
+  var T={en:{closes:"Ordering closes in ",closed:"Online ordering is closed. Call <a href=\"tel:+19542280435\" style=\"color:var(--gold-2)\">(954) 228-0435</a> and we’ll do our best.",stripClosed:"Online ordering closed · call (954) 228-0435",barClosed:"Ordering closed · call us",order:"Order online by Wed 8 PM"},
+         es:{closes:"Los pedidos cierran en ",closed:"Los pedidos en línea están cerrados. Llama al <a href=\"tel:+19542280435\" style=\"color:var(--gold-2)\">(954) 228-0435</a> y haremos lo posible.",stripClosed:"Pedidos en línea cerrados · llama al (954) 228-0435",barClosed:"Pedidos cerrados · llámanos",order:"Ordena en línea antes del mié 8 PM"}};
+  var els=[].slice.call(document.querySelectorAll("[data-es]"));
+  els.forEach(function(el){el.setAttribute("data-en",el.innerHTML)});
+  var META={en:document.title,es:"Ordena tu cena de Thanksgiving · Recogida jue 26 nov · Flamingo Supermarket Cooper City"};
+  function setLang(l,save){
+    LANG=l==="es"?"es":"en";
+    els.forEach(function(el){el.innerHTML=el.getAttribute(LANG==="es"?"data-es":"data-en")});
+    document.documentElement.lang=LANG;document.title=META[LANG];
+    document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===LANG?"true":"false")});
+    if(save){try{localStorage.setItem("fl_lang",LANG)}catch(e){} if(window.gtag)gtag("event","language_switch",{lang:LANG,src:src});}
+    if(typeof tick==="function")tick(true);
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"),true)})});
+  var start=p.get("lang");
+  if(!start){try{start=localStorage.getItem("fl_lang")}catch(e){}}
+  if(!start)start=/^es\b/i.test(navigator.language||"")?"es":"en";
+
   var end=new Date("2026-11-25T20:00:00-05:00").getTime();
   var $=function(id){return document.getElementById(id)};
   function pad(n){return n<10?"0"+n:""+n}
-  function tick(){
-    var ms=end-Date.now();
+  var timer;
+  function tick(once){
+    var ms=end-Date.now();var t=T[LANG];
     if(ms<=0){
       document.body.classList.add("closed");
-      $("count").innerHTML='<span class="lbl">Online ordering is closed. Call <a href="tel:+19542280435" style="color:var(--gold-2)">(954) 228-0435</a> and we’ll do our best.</span>';
-      $("stripCd").textContent="Online ordering closed · call (954) 228-0435";
-      $("barCd").textContent="Ordering closed · call us";
+      $("count").innerHTML='<span class="lbl">'+t.closed+'</span>';
+      $("stripCd").textContent=t.stripClosed;
+      $("barCd").textContent=t.barClosed;
       return;
     }
     var s=Math.floor(ms/1000),d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60),sec=s%60;
     $("cdD").textContent=d;$("cdH").textContent=pad(h);$("cdM").textContent=pad(m);$("cdS").textContent=pad(sec);
-    var txt="Ordering closes in "+(d?d+"d ":"")+h+"h "+pad(m)+"m";
+    var txt=t.closes+(d?d+"d ":"")+h+"h "+pad(m)+"m";
     $("stripCd").textContent=txt;$("barCd").textContent=txt;
-    setTimeout(tick,1000);
+    if(!once){clearTimeout(timer);timer=setTimeout(tick,1000);}
   }
+  setLang(start,false);
   tick();
 
   // sticky bar after hero
