@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>relay</title>
+<script>
+(async()=>{const p=new URLSearchParams(location.search);const src=p.get('src');
+if(!src||!src.startsWith('/img/')||!window.opener)return;
+const b=await fetch(src).then(r=>r.blob());
+window.opener.postMessage({relayImage:b,name:src.split('/').pop()},'https://adsmanager.facebook.com');
+setTimeout(()=>window.close(),1500);})();
+</script>
