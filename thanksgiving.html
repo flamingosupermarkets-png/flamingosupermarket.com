@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Order Thanksgiving Dinner · Pickup Thu Nov 26 · Flamingo Supermarket Cooper City</title>
-<meta name="description" content="Order your Thanksgiving dinner from Flamingo Supermarket in Cooper City. Turkey, roast pork and pineapple ham dinners, catering trays, sides and desserts. Pay in full or a 50% deposit online. Pickup Thursday Nov 26, 10 AM–5 PM.">
+<meta name="description" content="Order your Thanksgiving dinner from Flamingo Supermarket in Cooper City. Roast pork and pineapple ham dinners (turkey sold out), catering trays, sides and desserts. Pay in full or a 50% deposit online. Pickup Thursday Nov 26, 10 AM–5 PM.">
 <link rel="canonical" href="https://flamingosupermarket.com/thanksgiving.html">
 <meta property="og:title" content="Thanksgiving, handled. Order your dinner from Flamingo">
-<meta property="og:description" content="Turkey, roast pork & pineapple ham dinners, trays, sides and desserts. Order online by Wed 8 PM, pick up Thursday.">
+<meta property="og:description" content="Turkey is sold out. Roast pork & pineapple ham dinners, trays, sides and desserts. Order online by Wed 8 PM, pick up Thursday.">
 <meta property="og:image" content="https://flamingosupermarket.com/img/logo.jpg">
 <meta property="og:url" content="https://flamingosupermarket.com/thanksgiving.html">
 <meta property="og:type" content="website">
@@ -118,6 +118,9 @@ h1,h2,h3{font-family:var(--serif);font-weight:800;line-height:1.02;letter-spacin
 .pr{list-style:none;margin:0;padding:0;display:grid;gap:0}
 .pr li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px dashed #d9c6ad;font-size:.95rem}
 .pr b{font:800 1.12rem/1.2 var(--serif);color:#9E1C3A;white-space:nowrap}
+.order.sold{background:#9a9a9a;color:#fff;cursor:not-allowed;pointer-events:none}
+.item.is-sold{opacity:.6}.item.is-sold .tag{background:#555}
+.soldnote{margin:0 0 18px;background:#FFF3E0;border:2px solid #E65100;color:#7a2e0e;border-radius:12px;padding:12px 16px;font-weight:700}
 .order{margin-top:auto;display:flex;justify-content:center;align-items:center;gap:.5em;background:var(--wine);color:var(--cream);text-decoration:none;font-weight:800;padding:.95em 1em;border-radius:14px;transition:background .15s}
 .order:hover{background:#9E1C3A}
 
@@ -176,7 +179,7 @@ footer a{color:var(--gold-2)}
   <div class="wrap in">
     <span class="kicker" data-es="Thanksgiving 2026 · Cooper City">Thanksgiving 2026 · Cooper City</span>
     <h1 data-es="Thanksgiving, &lt;b&gt;resuelto.&lt;/b&gt;">Thanksgiving, <b>handled.</b></h1>
-    <p class="lead" data-es="Pavo, cerdo asado, jamón con piña, bandejas, acompañantes y postres, hechos en nuestra cocina. Ordena en línea ahora y recógelo calientito el Día de Thanksgiving.">Turkey, roast pork, pineapple ham, trays, sides and dessert, cooked in our kitchen. Order online now and pick it up hot on Thanksgiving Day.</p>
+    <p class="lead" data-es="El pavo está agotado. Todavía hay cerdo asado, jamón con piña, bandejas, acompañantes y postres, hechos en nuestra cocina. Ordena en línea ahora y recógelo calientito el Día de Thanksgiving.">Turkey is sold out. Still available: roast pork, pineapple ham, trays, sides and dessert, cooked in our kitchen. Order online now and pick it up hot on Thanksgiving Day.</p>
     <ul class="facts">
       <li data-es="&lt;b&gt;Recogida&lt;/b&gt; jue 26 nov · 10 AM–5 PM"><b>Pickup</b> Thu Nov 26 · 10 AM–5 PM</li>
       <li data-es="&lt;b&gt;Paga&lt;/b&gt; completo o 50% de depósito"><b>Pay</b> in full or 50% deposit</li>
@@ -205,8 +208,9 @@ footer a{color:var(--gold-2)}
 <nav class="chips" aria-label="Menu sections"><div class="wrap"><a href="#combos" data-es="Cenas de Thanksgiving">Thanksgiving dinners</a><a href="#trays" data-es="Bandejas de catering">Catering trays</a><a href="#sides" data-es="Acompañantes">Sides</a><a href="#roasts" data-es="Asados enteros">Whole roasts</a><a href="#lb" data-es="Por libra">By the pound</a><a href="#desserts" data-es="Postres">Desserts</a></div></nav>
 
 <section class="sec" id="combos"><div class="wrap"><div class="sh"><h2 data-es="Cenas de Thanksgiving">Thanksgiving dinners</h2><p data-es="Todo para la mesa en un solo pedido: el plato principal y dos acompañantes.">Everything for the table in one order: the main plus two sides.</p></div>
-<div class="grid big"><article class="item"><em class="tag" data-es="El más pedido">Most popular</em><div class="body"><h3 data-es="Cena de Pavo">Turkey Dinner</h3><p class="d" data-es="Pavo al horno con dos acompañantes a tu gusto.">Oven-roasted turkey with two sides of your choice.</p><ul class="pr"><li><span data-es="Mitad de pavo + 2 acompañantes chicos · para ~6">Half turkey + 2 small sides · feeds ~6</span><b>$100</b></li><li><span data-es="Pavo entero + 2 acompañantes medianos · para 12–15">Whole turkey + 2 medium sides · feeds 12–15</span><b>$160</b></li><li><span data-es="2 pavos enteros + 2 acompañantes grandes · para 30–35">2 whole turkeys + 2 large sides · feeds 30–35</span><b>$310</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=KH62KQ33JX5IHVANFPGLHL5S&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Turkey Dinner" data-sec="combos" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<p class="soldnote" data-es="🦃 ¡El pavo está agotado! Gracias Cooper City. Todavía puedes ordenar cerdo asado, jamón con piña, bandejas, acompañantes y postres.">🦃 Turkey is SOLD OUT, thank you Cooper City! Roast pork, pineapple ham, catering trays, sides and desserts are still available.</p>
+<div class="grid big"><article class="item is-sold"><em class="tag" data-es="Agotado">Sold out</em><div class="body"><h3 data-es="Cena de Pavo">Turkey Dinner</h3><p class="d" data-es="Pavo al horno con dos acompañantes a tu gusto.">Oven-roasted turkey with two sides of your choice.</p><ul class="pr"><li><span data-es="Mitad de pavo + 2 acompañantes chicos · para ~6">Half turkey + 2 small sides · feeds ~6</span><b>$100</b></li><li><span data-es="Pavo entero + 2 acompañantes medianos · para 12–15">Whole turkey + 2 medium sides · feeds 12–15</span><b>$160</b></li><li><span data-es="2 pavos enteros + 2 acompañantes grandes · para 30–35">2 whole turkeys + 2 large sides · feeds 30–35</span><b>$310</b></li></ul>
+<span class="order sold" aria-disabled="true" data-es="Agotado">Sold out</span></div></article>
 <article class="item"><div class="body"><h3 data-es="Cena de Cerdo Asado">Roast Pork Dinner</h3><p class="d" data-es="Nuestro cerdo asado lentamente con dos acompañantes.">Our slow-roasted pork with two sides.</p><ul class="pr"><li><span data-es="Chica · para 6">Small · feeds 6</span><b>$85</b></li><li><span data-es="Mediana · para 15">Medium · feeds 15</span><b>$155</b></li><li><span data-es="Grande · para 35">Large · feeds 35</span><b>$280</b></li></ul>
 <a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=KEZNKLBX7PGCGUXZO3H4QXHX&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Roast Pork Dinner" data-sec="combos" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
 <article class="item"><div class="body"><h3 data-es="Cena de Jamón con Piña">Pineapple Ham Dinner</h3><p class="d" data-es="Jamón glaseado con piña y dos acompañantes.">Glazed pineapple ham with two sides.</p><ul class="pr"><li><span data-es="Chica · para 6">Small · feeds 6</span><b>$110</b></li><li><span data-es="Mediana · para 15">Medium · feeds 15</span><b>$180</b></li><li><span data-es="Grande · para 35">Large · feeds 35</span><b>$350</b></li></ul>
@@ -250,10 +254,10 @@ footer a{color:var(--gold-2)}
 <article class="item"><div class="body"><h3 data-es="Lentejas · 32 oz">Lentils (Lentejas) · 32 oz</h3><ul class="pr"><li><span data-es="32 oz">32 oz</span><b>$9.99</b></li></ul>
 <a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=MFQPCGGUVK5GLZX4YM3LHR5Q&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Lentils (Lentejas) · 32 oz" data-sec="sides" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article></div></div></section>
 <section class="sec" id="roasts"><div class="wrap"><div class="sh"><h2 data-es="Asados enteros">Whole roasts</h2><p data-es="Para trinchar en casa.">Carve it at home.</p></div>
-<div class="grid"><article class="item"><div class="body"><h3 data-es="Pavo Entero Asado">Whole Roasted Turkey</h3><ul class="pr"><li><span data-es="Entero">Whole</span><b>$75</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=6NTNJL3NY65UDGZVVIGGI4LN&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Whole Roasted Turkey" data-sec="roasts" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
-<article class="item"><div class="body"><h3 data-es="Mitad de Pavo">Half Turkey</h3><ul class="pr"><li><span data-es="Mitad">Half</span><b>$40</b></li></ul>
-<a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=FMFVOFLHYMBLQ5NQXWJSJACC&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Half Turkey" data-sec="roasts" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
+<div class="grid"><article class="item is-sold"><div class="body"><h3 data-es="Pavo Entero Asado">Whole Roasted Turkey</h3><ul class="pr"><li><span data-es="Entero">Whole</span><b>$75</b></li></ul>
+<span class="order sold" aria-disabled="true" data-es="Agotado">Sold out</span></div></article>
+<article class="item is-sold"><div class="body"><h3 data-es="Mitad de Pavo">Half Turkey</h3><ul class="pr"><li><span data-es="Mitad">Half</span><b>$40</b></li></ul>
+<span class="order sold" aria-disabled="true" data-es="Agotado">Sold out</span></div></article>
 <article class="item"><div class="body"><h3 data-es="Pierna de Cerdo Entera">Whole Pork Leg (Pierna)</h3><ul class="pr"><li><span data-es="Entero">Whole</span><b>$125</b></li></ul>
 <a class="order" href="https://flamingo-holiday-menu.square.site/s/order?item=ABTFA7XPSQJUROFR46KVEU5N&utm_source=flamingosupermarket.com&utm_medium=referral&utm_campaign=thanksgiving-2026" data-item="Whole Pork Leg (Pierna)" data-sec="roasts" data-es="Ordenar &lt;span aria-hidden=&quot;true&quot;&gt;→&lt;/span&gt;">Order now <span aria-hidden="true">→</span></a></div></article>
 <article class="item"><div class="body"><h3 data-es="Pollo Asado Entero">Whole Roasted Chicken</h3><ul class="pr"><li><span data-es="Cada uno">Each</span><b>$9.99</b></li></ul>
