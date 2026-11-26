@@ -1,5 +1,5 @@
-<!doctype html><meta charset="utf-8"><title>grab</title>
-<body style="font-family:sans-serif;padding:20px"><pre id="log">ready</pre>
+<!doctype html><html lang="en"><meta charset="utf-8"><title>grab</title>
+<body style="font-family:sans-serif;padding:20px"><main><h1>Image grabber (internal tool)</h1><pre id="log">ready</pre></main>
 <script>
 const log=m=>{document.getElementById('log').textContent+='\n'+m;window.__r=m};
 function crc32(buf){let c,crc=0xFFFFFFFF;for(let n=0;n<buf.length;n++){c=(crc^buf[n])&0xFF;for(let k=0;k<8;k++)c=c&1?(c>>>1)^0xEDB88320:c>>>1;crc=(crc>>>8)^c;}return (crc^0xFFFFFFFF)>>>0;}

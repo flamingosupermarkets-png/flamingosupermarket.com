@@ -51,9 +51,9 @@
 .cater ul{margin:0;padding-left:18px;color:var(--ink-2)}
 </style>
 </head>
-<body><!-- TG-BAR-2026: remove after Thanksgiving --><a href="/thanksgiving.html?utm_source=website&utm_medium=bar&utm_campaign=thanksgiving-2026" style="display:block;background:#E8B04B;color:#1A0A0D;text-align:center;font:700 15px/1.35 system-ui,-apple-system,Segoe UI,sans-serif;padding:10px 14px;text-decoration:none;position:relative;z-index:60"><span class="en">🦃 Thanksgiving dinners: order online by Wed 8 PM · pickup Thu Nov 26 · <u>Order now →</u></span><span class="es">🦃 Cenas de Thanksgiving: ordena en línea antes del mié 8 PM · recoge el jue 26 nov · <u>Ordenar →</u></span></a><!-- /TG-BAR-2026 -->
-<div class="topbar"><div class="wrap">
-  <span><span class="dot">●</span> <span class="en">Open today 7 AM – 10 PM</span><span class="es">Abierto hoy 7 AM – 10 PM</span></span>
+<body><a class="skip-link" href="#main"><span class="en">Skip to main content</span><span class="es">Saltar al contenido</span></a><!-- TG-BAR-2026: remove after Thanksgiving --><div role="region" aria-label="Thanksgiving"><a href="/thanksgiving.html?utm_source=website&utm_medium=bar&utm_campaign=thanksgiving-2026" style="display:block;background:#E8B04B;color:#1A0A0D;text-align:center;font:700 15px/1.35 system-ui,-apple-system,Segoe UI,sans-serif;padding:10px 14px;text-decoration:none;position:relative;z-index:60"><span class="en">🦃 Thanksgiving dinners: order online by Wed 8 PM · pickup Thu Nov 26 · <u>Order now →</u></span><span class="es">🦃 Cenas de Thanksgiving: ordena en línea antes del mié 8 PM · recoge el jue 26 nov · <u>Ordenar →</u></span></a></div><!-- /TG-BAR-2026 -->
+<div class="topbar" role="region" aria-label="Store info / Información de la tienda"><div class="wrap">
+  <span><span class="dot" aria-hidden="true">●</span> <span class="en">Open today 7 AM – 10 PM</span><span class="es">Abierto hoy 7 AM – 10 PM</span></span>
   <span>2581 N Hiatus Rd, Cooper City · Embassy Lakes</span>
   <span>(954) 228-0435</span>
 </div></div>
@@ -66,9 +66,9 @@
     <a class="ad" href="weekly-ad.html" aria-current="page"><span class="en">Weekly ad</span><span class="es">Ofertas</span></a>
     <a class="shop" href="https://flamingo-supermarkets.myshopify.com" target="_blank" rel="noopener"><span class="en">Shop online</span><span class="es">Compra en línea</span></a>
   </nav>
-  <button class="lang-btn" id="langBtn" type="button" aria-label="Cambiar idioma"><span class="en">ES</span><span class="es">EN</span></button>
+  <button class="lang-btn" id="langBtn" type="button"><span class="en">ES<span class="sr-only" lang="es"> · Ver en español</span></span><span class="es">EN<span class="sr-only" lang="en"> · View in English</span></span></button>
 </div></header>
-<main>
+<main id="main">
 <style>
 .flyer{display:grid;gap:22px;max-width:760px;margin-inline:auto}
 .flyer img{width:100%;border:3px solid var(--ink);border-radius:14px;box-shadow:var(--shadow);background:#fff}
@@ -88,9 +88,9 @@
 .tgb h2{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3.6vw,2.2rem);line-height:1.08;margin:8px 0 6px;color:#fff}
 .tgb p{margin:0;opacity:.95;max-width:58ch}
 .tgb-tag{display:inline-block;background:#FFC72C;color:#3A2A00;font:800 .75rem/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:.5em .8em;border-radius:999px}
-.tgb-btn{flex:none;background:#E8148B;color:#fff;font:800 1.05rem/1 var(--body);padding:1em 1.4em;border-radius:999px;border:2px solid #fff;white-space:nowrap}
-.tgb-open{margin-top:12px;background:#FFF4E4;border:2px dashed var(--ink);border-radius:12px;padding:10px 14px;text-align:center;color:var(--ink)}
-.tgb-open b{color:var(--pink)}
+.tgb-btn{flex:none;background:#C81077;color:#fff;font:800 1.05rem/1 var(--body);padding:1em 1.4em;border-radius:999px;border:2px solid #fff;white-space:nowrap}
+.tgb-open{margin-top:12px;background:#FFF4E4;border:2px dashed #1E1620;border-radius:12px;padding:10px 14px;text-align:center;color:#1E1620}
+.tgb-open b{color:#C81077}
 @media(max-width:700px){.tgb{flex-direction:column;align-items:flex-start}.tgb-btn{width:100%;text-align:center}}
 </style>
 <section class="tgb-wrap"><div class="wrap">
@@ -121,6 +121,13 @@
   <a href="flyer/weekly-ad-nov26-dec2.pdf" target="_blank" rel="noopener"><img src="flyer/sneak-nov26-page-2.jpg" alt="Flamingo weekly ad Nov 26 – Dec 2 page 2: plantains, avocados, mangoes, wines, Coronita, Corona, Mahou, yuca, hojas de plátano, Carnation" loading="lazy"></a>
   <p class="fine" style="text-align:center">Prices valid November 26 – December 2, 2026 at Flamingo Cooper City. We reserve the right to limit quantities. While supplies last.</p>
 </div></section>
+<section class="sec" aria-labelledby="dealsText"><div class="wrap">
+<h2 id="dealsText"><span class="en">Every deal, as text</span><span class="es">Todas las ofertas en texto</span></h2>
+<p><span class="en">Prices valid Thursday, November 26 through Wednesday, December 2, 2026, at Flamingo Cooper City.</span><span class="es">Precios válidos del jueves 26 de noviembre al miércoles 2 de diciembre de 2026 en Flamingo Cooper City.</span></p>
+<div class="deal-cols"><div><h3><span class="en">Page 1: meat, produce &amp; seafood</span><span class="es">Página 1: carnes, vegetales y mariscos</span></h3><ul><li>Beef Oxtail <span class="k">(imported cut-up)</span>: <b>$6.99/lb</b></li><li>Goat Meat <span class="k">(cut-up)</span>: <b>$4.99/lb</b></li><li>Tomahawk Steak <span class="k">(imported · prev. frozen)</span>: <b>$8.99/lb</b></li><li>Beef Picanha <span class="k">(whole)</span>: <b>$8.99/lb</b></li><li>Beef Short Ribs <span class="k">(imported)</span>: <b>$5.99/lb</b></li><li>Ground Beef <span class="k">(93% lean)</span>: <b>$5.99/lb</b></li><li>Cubed Steak <span class="k">(beef)</span>: <b>$5.99/lb</b></li><li>Chicken Breast <span class="k">(boneless)</span>: <b>$1.99/lb</b></li><li>Pork Spare Ribs <span class="k">(whole)</span>: <b>$1.99/lb</b></li><li>Yellow Onions <span class="k">(3 lb bag)</span>: <b>5 for $10</b></li><li>Idaho Potatoes <span class="k">(u.s. #1 · 5 lb bag)</span>: <b>5 for $10</b></li><li>Green Coconuts <span class="k">(fresh)</span>: <b>5 for $10</b></li><li>Whole Salmon <span class="k">(fresh)</span>: <b>$5.99/lb</b></li><li>Yellowtail <span class="k">(fresh)</span>: <b>$5.99/lb</b></li><li>Kingfish <span class="k">(whole)</span>: <b>$4.99/lb</b></li></ul></div>
+<div><h3><span class="en">Page 2: produce, wine, beer &amp; grocery</span><span class="es">Página 2: vegetales, vinos, cervezas y abarrotes</span></h3><ul><li>Green Plantains <span class="k">(jumbo yams or)</span>: <b>49¢/lb</b></li><li>Avocados <span class="k">(fresh)</span>: <b>2 for $3</b></li><li>Mangoes <span class="k">(imported)</span>: <b>4 for $5</b></li><li>Los Riscos Wine <span class="k">(1.5 l bottle)</span>: <b>$6.99 each</b></li><li>Gato Negro Wine <span class="k">(750 ml bottle)</span>: <b>$3.99 each</b></li><li>Tres Ríos Wine <span class="k">(750 ml · spanish red)</span>: <b>3 for $10</b></li><li>Viña Cumbrero Wine <span class="k">(750 ml bottle)</span>: <b>3 for $10</b></li><li>La Fuerza Wine <span class="k">(750 ml bottle)</span>: <b>2 for $10</b></li><li>Josh Wine <span class="k">(750 ml bottle)</span>: <b>$10 each</b></li><li>Coronita Extra <span class="k">(24 pack · 7 oz bottles)</span>: <b>$25.99 each</b></li><li>Corona Extra <span class="k">(18 pack · 12 oz bottles)</span>: <b>$25.99 each</b></li><li>Mahou <span class="k">(12 pack · 8.4 oz bottles)</span>: <b>$9.99 each</b></li><li>Frozen Yuca <span class="k">(el viejo luis · 4 lb bag)</span>: <b>3 for $10</b></li><li>Hojas De Plátano <span class="k">(el viejo luis · 16 oz)</span>: <b>4 for $5</b></li><li>Evaporated Milk <span class="k">(carnation · 12 oz can)</span>: <b>4 for $5</b></li></ul></div></div>
+</div></section>
+<style>.deal-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}@media(max-width:700px){.deal-cols{grid-template-columns:1fr}}.deal-cols li{margin:4px 0}.deal-cols .k{color:var(--mute)}</style>
 </main>
 <footer><div class="wrap">
   <div class="cols">
@@ -129,9 +136,9 @@
       <p style="opacity:.85;max-width:30ch"><span class="en">Cooper City's international supermarket and eatery.</span><span class="es">El supermercado internacional y comedor de Cooper City.</span></p>
       <ul style="margin-top:14px"><li><a href="https://www.instagram.com/flamingo_supermarkets/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/612159848655351" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.tiktok.com/@flamingo.supermar" target="_blank" rel="noopener">TikTok</a></li></ul>
     </div>
-    <div><h4><span class="en">Visit</span><span class="es">Visítanos</span></h4><p>2581 N Hiatus Rd<br>Embassy Lakes Shopping Center<br>Cooper City, FL 33026</p><p style="margin-top:8px"><a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener"><span class="en">Directions →</span><span class="es">Cómo llegar →</span></a></p><p style="margin-top:6px;font-size:.85rem;opacity:.85"><span class="en">Near <a href="supermarket-pembroke-pines.html">Pembroke Pines</a>, <a href="supermarket-davie.html">Davie</a>, <a href="supermarket-hollywood.html">Hollywood</a> &amp; <a href="supermarket-weston.html">Weston</a></span><span class="es">Cerca de <a href="supermarket-pembroke-pines.html">Pembroke Pines</a>, <a href="supermarket-davie.html">Davie</a>, <a href="supermarket-hollywood.html">Hollywood</a> y <a href="supermarket-weston.html">Weston</a></span></p></div>
-    <div><h4><span class="en">Hours</span><span class="es">Horario</span></h4><p><span class="en">Open daily 7 AM – 10 PM</span><span class="es">Todos los días 7 AM – 10 PM</span></p><p style="margin-top:8px">(954) 228-0435<br>flamingosupermarkets@gmail.com</p></div>
-    <div><h4><span class="en">Explore</span><span class="es">Explora</span></h4><ul>
+    <div><h2 class="fh"><span class="en">Visit</span><span class="es">Visítanos</span></h2><p>2581 N Hiatus Rd<br>Embassy Lakes Shopping Center<br>Cooper City, FL 33026</p><p style="margin-top:8px"><a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener"><span class="en">Directions →</span><span class="es">Cómo llegar →</span></a></p><p style="margin-top:6px;font-size:.85rem;opacity:.85"><span class="en">Near <a href="supermarket-pembroke-pines.html">Pembroke Pines</a>, <a href="supermarket-davie.html">Davie</a>, <a href="supermarket-hollywood.html">Hollywood</a> &amp; <a href="supermarket-weston.html">Weston</a></span><span class="es">Cerca de <a href="supermarket-pembroke-pines.html">Pembroke Pines</a>, <a href="supermarket-davie.html">Davie</a>, <a href="supermarket-hollywood.html">Hollywood</a> y <a href="supermarket-weston.html">Weston</a></span></p></div>
+    <div><h2 class="fh"><span class="en">Hours</span><span class="es">Horario</span></h2><p><span class="en">Open daily 7 AM – 10 PM</span><span class="es">Todos los días 7 AM – 10 PM</span></p><p style="margin-top:8px">(954) 228-0435<br>flamingosupermarkets@gmail.com</p></div>
+    <div><h2 class="fh"><span class="en">Explore</span><span class="es">Explora</span></h2><ul>
       <li><a href="index.html"><span class="en">Home</span><span class="es">Inicio</span></a></li>
       <li><a href="restaurants.html"><span class="en">Restaurants &amp; menus</span><span class="es">Restaurantes y menús</span></a></li>
       <li><a href="events.html"><span class="en">Events</span><span class="es">Eventos</span></a></li>
@@ -148,7 +155,7 @@
     </ul></div>
   </div>
   <div class="legal"><span>© 2026 Flamingo Supermarkets</span><span><span class="en">Cooper City, Florida</span><span class="es">Cooper City, Florida</span></span></div>
-</div></footer>
+</div><div class="wrap"><p style="margin:18px 0 0;font-size:.9rem"><a href="/accessibility.html" style="color:#FFF1E6;text-decoration:underline"><span class="en">Accessibility</span><span class="es">Accesibilidad</span></a></p></div></footer>
 <nav class="actionbar" aria-label="Quick actions">
   <a href="tel:+19542280435">📞 <span class="en">Call</span><span class="es">Llamar</span></a>
   <a href="https://maps.app.goo.gl/1Dkw21HxVbFVhiEC8" target="_blank" rel="noopener">📍 <span class="en">Directions</span><span class="es">Cómo llegar</span></a>
